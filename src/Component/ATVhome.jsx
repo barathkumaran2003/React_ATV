@@ -1,0 +1,313 @@
+import React from 'react'
+import './Atv.css';
+import ABG1 from '../../public/A-BG1.png';
+import ABG2 from '../../public/A-BG2.png';
+import ABG3 from '../../public/A-BG3.png';
+import ABG4 from '../../public/A-BG4.png';
+import ABG5 from '../../public/A-BG5.png';
+import ABG6 from '../../public/A-BG6.png';
+import ABG7 from '../../public/A-BG7.png';
+import ABG8 from '../../public/A-BG8.png';
+import ABG9 from '../../public/A-BG9.png';
+import ABG10 from '../../public/A-BG10.png';
+import ABG11 from '../../public/A-BG11.png';
+import ABG12 from '../../public/A-BG12.png';
+import ABG13 from '../../public/A-BG13.png';
+import ABG14 from '../../public/A-BG14.png';
+import ABG15 from '../../public/A-BG15.png';
+import ABG16 from '../assets/A-BG16.jpg'
+import ABG17 from '../assets/A-BG17.jpg'
+import ABG18 from '../assets/A-BG18.jpg'
+import ABG19 from '../assets/A-BG19.jpg'
+import ABG20 from '../../public/A-BG20.png';
+import ABG21 from '../../public/A-BG21.png';
+import Footer from './Footer';
+
+
+
+
+function ATVhome() {
+  return (
+    <>
+    <div className='bg'>
+        <img src={ABG1} alt="bg" className='A-bg1'/>
+        <div className='home-nav'>
+         <div className='in-animation7'>
+         <div className='home-nav-in'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 26" fill="none" className='home-nav-svg'>
+                    <path d="M0.481567 24.7061L5.3471 0.378467H10.0925L14.958 24.7061H10.8434L9.88226 19.0898H5.64744L4.65632 24.7061H0.481567ZM6.09796 16.2665H9.40172L7.74984 6.05492L6.09796 16.2665Z" fill="black"/>
+                    <path d="M19.5946 24.7061V3.65219H15.7202V0.378467H27.854V3.65219H24.0396V24.7061H19.5946Z" fill="black"/>
+                    <path d="M34.6924 24.7061L29.7968 0.378467H33.7313L36.9449 17.588L39.9483 0.378467H43.9729L39.0773 24.7061H34.6924Z" fill="black"/>
+                    <path d="M65.8239 24.7061L66.2444 0.378467H70.8396L74.2936 17.2276L77.8977 0.378467H82.3427L82.7932 24.7061H79.4895L79.1291 7.79691L75.6751 24.7061H73.0021L69.4881 7.73684L69.1577 24.7061H65.8239Z" fill="black"/>
+                    <path d="M93.8944 25.0365C92.1724 25.0365 90.8009 24.7162 89.7797 24.0754C88.7585 23.4347 88.0277 22.5136 87.5872 21.3123C87.1467 20.1109 86.9265 18.6893 86.9265 17.0474V7.94708C86.9265 6.30521 87.1467 4.90362 87.5872 3.7423C88.0277 2.56095 88.7585 1.65993 89.7797 1.03922C90.8009 0.418512 92.1724 0.108159 93.8944 0.108159C95.6564 0.108159 97.038 0.418512 98.0391 1.03922C99.0603 1.65993 99.7911 2.56095 100.232 3.7423C100.692 4.90362 100.922 6.30521 100.922 7.94708V17.0775C100.922 18.6993 100.692 20.1109 100.232 21.3123C99.7911 22.4936 99.0603 23.4147 98.0391 24.0754C97.038 24.7162 95.6564 25.0365 93.8944 25.0365ZM93.8944 21.7628C94.6352 21.7628 95.1758 21.6026 95.5162 21.2822C95.8766 20.9619 96.1169 20.5214 96.2371 19.9607C96.3572 19.4001 96.4173 18.7894 96.4173 18.1287V6.92592C96.4173 6.24514 96.3572 5.63445 96.2371 5.09383C96.1169 4.55322 95.8766 4.13274 95.5162 3.8324C95.1758 3.51203 94.6352 3.35185 93.8944 3.35185C93.1936 3.35185 92.663 3.51203 92.3026 3.8324C91.9422 4.13274 91.7019 4.55322 91.5818 5.09383C91.4616 5.63445 91.4016 6.24514 91.4016 6.92592V18.1287C91.4016 18.7894 91.4516 19.4001 91.5517 19.9607C91.6719 20.5214 91.9121 20.9619 92.2725 21.2822C92.633 21.6026 93.1736 21.7628 93.8944 21.7628Z" fill="black"/>
+                    <path d="M107.427 24.7061V3.65219H103.552V0.378467H115.686V3.65219H111.872V24.7061H107.427Z" fill="black"/>
+                    <path d="M125.291 25.0365C123.569 25.0365 122.197 24.7162 121.176 24.0754C120.155 23.4347 119.424 22.5136 118.983 21.3123C118.543 20.1109 118.323 18.6893 118.323 17.0474V7.94708C118.323 6.30521 118.543 4.90362 118.983 3.7423C119.424 2.56095 120.155 1.65993 121.176 1.03922C122.197 0.418512 123.569 0.108159 125.291 0.108159C127.053 0.108159 128.434 0.418512 129.435 1.03922C130.457 1.65993 131.187 2.56095 131.628 3.7423C132.088 4.90362 132.319 6.30521 132.319 7.94708V17.0775C132.319 18.6993 132.088 20.1109 131.628 21.3123C131.187 22.4936 130.457 23.4147 129.435 24.0754C128.434 24.7162 127.053 25.0365 125.291 25.0365ZM125.291 21.7628C126.031 21.7628 126.572 21.6026 126.913 21.2822C127.273 20.9619 127.513 20.5214 127.633 19.9607C127.753 19.4001 127.814 18.7894 127.814 18.1287V6.92592C127.814 6.24514 127.753 5.63445 127.633 5.09383C127.513 4.55322 127.273 4.13274 126.913 3.8324C126.572 3.51203 126.031 3.35185 125.291 3.35185C124.59 3.35185 124.059 3.51203 123.699 3.8324C123.338 4.13274 123.098 4.55322 122.978 5.09383C122.858 5.63445 122.798 6.24514 122.798 6.92592V18.1287C122.798 18.7894 122.848 19.4001 122.948 19.9607C123.068 20.5214 123.308 20.9619 123.669 21.2822C124.029 21.6026 124.57 21.7628 125.291 21.7628Z" fill="black"/>
+                    <path d="M136.508 24.7061V0.378467H142.334C143.976 0.378467 145.358 0.578695 146.479 0.979152C147.62 1.35958 148.481 2.02034 149.062 2.96141C149.663 3.90248 149.963 5.18393 149.963 6.80578C149.963 7.78689 149.873 8.6679 149.693 9.44879C149.513 10.2297 149.202 10.9004 148.762 11.4611C148.341 12.0017 147.751 12.4222 146.99 12.7225L150.384 24.7061H145.938L142.995 13.5635H140.953V24.7061H136.508ZM140.953 10.7703H142.334C143.195 10.7703 143.876 10.6502 144.377 10.4099C144.897 10.1496 145.268 9.74913 145.488 9.20851C145.708 8.64787 145.818 7.93707 145.818 7.07609C145.818 5.8547 145.588 4.94366 145.128 4.34298C144.687 3.72227 143.836 3.41192 142.575 3.41192H140.953V10.7703Z" fill="black"/>
+                    <path d="M160.674 25.0365C158.892 25.0365 157.491 24.6861 156.47 23.9853C155.469 23.2845 154.768 22.3334 154.367 21.1321C153.967 19.9107 153.767 18.5091 153.767 16.9273V8.24742C153.767 6.58553 153.967 5.14389 154.367 3.9225C154.768 2.70111 155.469 1.76004 156.47 1.09929C157.491 0.438535 158.892 0.108159 160.674 0.108159C162.356 0.108159 163.668 0.39849 164.609 0.979152C165.57 1.53979 166.251 2.35071 166.651 3.41192C167.052 4.47313 167.252 5.70453 167.252 7.10612V9.14844H162.987V7.04605C162.987 6.36528 162.947 5.74457 162.867 5.18393C162.807 4.6233 162.617 4.1828 162.296 3.86243C161.996 3.52204 161.465 3.35185 160.704 3.35185C159.944 3.35185 159.383 3.53206 159.023 3.89247C158.682 4.23285 158.462 4.70339 158.362 5.30407C158.262 5.88473 158.212 6.54548 158.212 7.28633V17.8584C158.212 18.7394 158.282 19.4702 158.422 20.0508C158.562 20.6115 158.812 21.042 159.173 21.3423C159.553 21.6226 160.064 21.7628 160.704 21.7628C161.445 21.7628 161.966 21.5926 162.266 21.2522C162.587 20.8918 162.787 20.4213 162.867 19.8406C162.947 19.2599 162.987 18.6092 162.987 17.8884V15.6959H167.252V17.6481C167.252 19.0898 167.062 20.3712 166.681 21.4925C166.301 22.5937 165.63 23.4647 164.669 24.1055C163.728 24.7262 162.396 25.0365 160.674 25.0365Z" fill="black"/>
+                    <path d="M174.583 24.7061V15.4256L169.657 0.378467H173.802L176.805 10.0194L179.629 0.378467H183.683L178.818 15.4256V24.7061H174.583Z" fill="black"/>
+                    <path d="M193.039 25.0365C191.257 25.0365 189.855 24.6861 188.834 23.9853C187.833 23.2845 187.132 22.3334 186.731 21.1321C186.331 19.9107 186.131 18.5091 186.131 16.9273V8.24742C186.131 6.58553 186.331 5.14389 186.731 3.9225C187.132 2.70111 187.833 1.76004 188.834 1.09929C189.855 0.438535 191.257 0.108159 193.039 0.108159C194.721 0.108159 196.032 0.39849 196.973 0.979152C197.934 1.53979 198.615 2.35071 199.015 3.41192C199.416 4.47313 199.616 5.70453 199.616 7.10612V9.14844H195.351V7.04605C195.351 6.36528 195.311 5.74457 195.231 5.18393C195.171 4.6233 194.981 4.1828 194.66 3.86243C194.36 3.52204 193.829 3.35185 193.069 3.35185C192.308 3.35185 191.747 3.53206 191.387 3.89247C191.046 4.23285 190.826 4.70339 190.726 5.30407C190.626 5.88473 190.576 6.54548 190.576 7.28633V17.8584C190.576 18.7394 190.646 19.4702 190.786 20.0508C190.926 20.6115 191.176 21.042 191.537 21.3423C191.917 21.6226 192.428 21.7628 193.069 21.7628C193.809 21.7628 194.33 21.5926 194.63 21.2522C194.951 20.8918 195.151 20.4213 195.231 19.8406C195.311 19.2599 195.351 18.6092 195.351 17.8884V15.6959H199.616V17.6481C199.616 19.0898 199.426 20.3712 199.045 21.4925C198.665 22.5937 197.994 23.4647 197.033 24.1055C196.092 24.7262 194.761 25.0365 193.039 25.0365Z" fill="black"/>
+                    <path d="M203.612 24.7061V0.378467H208.057V21.6427H213.944V24.7061H203.612Z" fill="black"/>
+                    <path d="M217.154 24.7061V0.378467H227.366V3.50202H221.599V10.5H226.134V13.5935H221.599V21.6427H227.426V24.7061H217.154Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M52.4914 25.0365C51.3701 25.0365 50.389 24.8063 49.548 24.3457C48.7271 23.8652 48.0863 23.2044 47.6258 22.3635C47.1853 21.5025 46.9651 20.5014 46.9651 19.3601C46.9651 17.8183 47.2954 16.4768 47.9562 15.3355C48.637 14.1942 49.4779 13.143 50.4791 12.1819C50.0986 11.4611 49.7082 10.7403 49.3077 10.0194C48.9073 9.27859 48.5769 8.52774 48.3166 7.76687C48.0563 7.00601 47.9262 6.23513 47.9262 5.45424C47.9262 4.41306 48.1364 3.49201 48.5569 2.6911C48.9774 1.89019 49.578 1.25947 50.3589 0.798945C51.1398 0.318399 52.0809 0.078125 53.1821 0.078125C54.2033 0.078125 55.0943 0.278354 55.8552 0.67881C56.6361 1.07927 57.2568 1.64991 57.7173 2.39076C58.1778 3.11158 58.4081 3.96254 58.4081 4.94366C58.4081 6.02489 58.1678 7.02603 57.6873 7.94708C57.2267 8.86813 56.6661 9.70908 56.0054 10.4699C55.3446 11.2108 54.7039 11.9016 54.0832 12.5423L57.3269 18.0986C57.5271 17.7382 57.6973 17.2777 57.8374 16.7171C57.9776 16.1564 58.0877 15.5557 58.1678 14.915C58.2679 14.2743 58.338 13.6836 58.3781 13.143H61.6217C61.6217 14.1241 61.5216 15.0552 61.3214 15.9362C61.1412 16.8172 60.8909 17.6381 60.5705 18.399C60.2502 19.1398 59.8998 19.8306 59.5194 20.4713C59.7596 20.7516 60.07 21.0019 60.4504 21.2222C60.8509 21.4224 61.2713 21.5325 61.7118 21.5526V25.0065C61.5917 25.0265 61.4716 25.0365 61.3514 25.0365C61.2513 25.0565 61.1512 25.0666 61.0511 25.0666C60.5105 25.0465 60.0099 24.9264 59.5494 24.7061C59.0889 24.4659 58.6684 24.1755 58.288 23.8352C57.9075 23.4948 57.5671 23.1544 57.2668 22.814C56.7462 23.4747 56.0854 24.0154 55.2845 24.4358C54.4836 24.8363 53.5526 25.0365 52.4914 25.0365ZM54.1432 21.5826C53.7027 21.8829 53.1821 22.0331 52.5815 22.0331C52.1009 22.0331 51.7105 21.913 51.4101 21.6727C51.1098 21.4124 50.8895 21.072 50.7494 20.6515C50.6092 20.211 50.5391 19.7505 50.5391 19.27C50.5391 18.4891 50.6593 17.7382 50.8995 17.0174C51.1398 16.2766 51.4902 15.5758 51.9507 14.915L55.2845 20.5314C54.9642 20.9319 54.5837 21.2822 54.1432 21.5826ZM53.8129 8.78803C53.4925 9.40874 53.1621 9.93934 52.8217 10.3798C52.5214 9.65903 52.2311 8.87814 51.9507 8.03718C51.6704 7.1762 51.5303 6.31522 51.5303 5.45424C51.5303 4.81351 51.6704 4.2729 51.9507 3.8324C52.2311 3.37187 52.6515 3.14161 53.2122 3.14161C53.6927 3.14161 54.0932 3.30179 54.4135 3.62216C54.7339 3.9225 54.8941 4.34298 54.8941 4.88359C54.8941 5.5043 54.794 6.15504 54.5938 6.83581C54.3935 7.51659 54.1332 8.16733 53.8129 8.78803Z" fill="#68E5B2"/>
+                </svg>
+                <li className='home-nav-in-li'>
+                <ul><a href="#ABOUT" className='home-nav-in-ul'>Demo</a></ul>
+                <ul><a href="#ABOUT" className='home-nav-in-ul'>About Us</a></ul>
+                <ul><a href="#ABOUT" className='home-nav-in-ul'>Service</a></ul>
+                <ul><a href="#ABOUT" className='home-nav-in-ul'>News</a></ul>
+                <ul><a href="#ABOUT" className='home-nav-in-ul'>All pages</a></ul>
+                </li>
+                <div className='search-bar'>
+                    <a href=""><svg className="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21">
+                        <path d="M23.384 21.619l-6.8-6.8c1.187-1.509 1.916-3.412 1.916-5.462C18.5 4.272 14.353.125 9.25.125S.125 4.272.125 9.375 4.272 18.625 9.375 18.625c2.05 0 3.953-.729 5.462-1.916l6.8 6.8c.166.166.383.25.6.25s.434-.084.6-.25a.848.848 0 000-1.2zM9.375 16.875c-4.143 0-7.5-3.357-7.5-7.5s3.357-7.5 7.5-7.5 7.5 3.357 7.5 7.5-3.357 7.5-7.5 7.5z"/>
+                      </svg></a>  
+                </div>
+    
+                <i class="fas fa-shopping-cart cart-in" id='cart'></i>
+                <div className='home-nav-contact'>
+                    <h5 className='home-nav-contact-h1'><samp>CONTACT US
+                    </samp></h5>
+                </div>
+          </div>
+         </div>
+          <div class="in-animation4">
+                <div className='home-hero-h1'>
+                    <h1 className='home-hero-head'>Passionate about motorcycles</h1>
+                </div>
+                <div className='home-hero-h1-sub'>
+                    <p className='home-hero-para'>Join us at ATM & Motorcycle and be part of a thriving community that celebrates the adrenaline-fueled sport of motocross. Whether you're seeking information, entertainment, or connection, we've got it all covered.</p>
+                </div>
+                <div className="up">
+                <div className="in-animation4" id='home-hero-head-up'>
+                   <a href="explore1.html"><h5>EXPLORE MORE</h5></a>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div className='bg2'>
+
+        </div>
+        <div className="in-animation7" id='contact'>
+            <div className='contact-div'>
+                <i class="fas fa-phone-volume" id='contact-phone'></i>   
+                <p className='contact-number'> (+91) 94429-51070</p>``
+                <i class="fas fa-location-dot" id='contact-location'></i>
+                <p className='contact-add'> 14 MWC, Chengalpattu, Chennai</p>
+                <input type="text" placeholder=" E-Mail" required className='contact-email' />
+                <div className='contact-get'>
+                    <h5>GET IN TOUCH</h5>
+                </div>
+            </div>
+        </div>
+        <div className='home-head2'>
+            <div className='home-head-div'>
+                <div className="in-animation4">
+                    <img src={ABG2} alt="av" className='home-head-div-img'/>
+                </div>
+                <div className='home-head-div-para'>
+                    <div className='home-head-div-sub'>
+                        <h1 className="in-animation4">
+                            We Live And Breathe Motocross
+                        </h1>
+                        <h6 className="in-animation4" id='home-hero-div-h6'>
+                            Stay up to date with the latest motocross news, including race results, championship standings, rider interviews, and industry developments. We provide timely and accurate information, keeping you in the loop.
+                        </h6>
+                        <div className="up">
+                            <div className="in-animation4" id='home-hero-up'>
+                                <h5 className='home-hero-up-h'> EXPLORE MORE</h5>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div className="in-animation8" id='main-box'>
+                <div style={{display: 'flex'}}>
+                    <div className='box-1'>
+                         <h3 className="in-animation4" id='box-1-head'>Join us at ATM & Motorcycle</h3>
+                         <p style={{color:'gray'}} className="in-animation4">Looking to upgrade your motorcycle or gear? We provide honest and detailed reviews of the latest bikes, accessories, and safety equipment. Make informed decisions and find the perfect fit for your needs.</p>
+                         <div className="up">
+                            <div className="in-animation4" id='box-1-button'>
+                                <h5 className='box-1-button-head'> LEARN MORE</h5>
+                            </div>
+                         </div>
+                    </div>
+                    <div className='box-2'>
+                        <img src={ABG3}  alt="ff" className='box-2-img'/>
+                        <div class="in-animation4" id='box-2-div'>
+                            Adrenaline-Fueled Sports
+                        </div>
+                    </div>
+                </div>
+                <div style={{display:'flex'}}>
+                    <div className='box-3'>
+                        <img src={ABG4} alt="ff" className='box-3-img'/>
+                        <div className="in-animation4" id='box-3-div'>
+                            Dive Into The World
+                        </div>
+                    </div>
+                    <div className='box-4'>
+                         <h3 className="in-animation4" id='box-4-head'>Strap on your helmet, rev your engine</h3>
+                         <p style={{color:'gray'}} className="in-animation4">Immerse yourself in the world of motocross through our collection of captivating videos and stunning photos. Relive epic races, witness incredible stunts, and get inspired by the passion that drives the motocross community.</p>
+                         <div className="up">
+                            <div className="in-animation4" id='box-4-button'>
+                                <h5 className='box-4-button-head'> LEARN MORE</h5>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+                <div className="in-animation4" id='para'>
+                    <h1 className='para-head'>
+                        Be Part Of <img src={ABG5} alt="sdf" style={{width:'130px', height:'60px'}}/> A Thriving Community That <br/>
+                        Celebrates The Adrenaline-Fueled Sport <img src={ABG6} alt=""style={{width:'130px', height:'60px', overflow:'hidden'}}/> . <br/>
+                        Whether You're Seeking Information, Entertainment, <br/>
+                        Or Connection,We've Got It All <img src={ABG7} alt="" style={{width:'130px', height:'60px'}}/> Covered For You. 
+                    </h1>
+                </div>    
+                <div className="up">
+                    <div className="in-animation4" id='para-button'>
+                        <h5 className='para-button-head'>EXPLORE MORE</h5>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div className='frame'>
+        <div style={{display:'flex'}} className="in-animation4">
+            <img src={ABG8} alt="" className='frame-1'/>
+            <img src={ABG9} alt="" className='frame-2-3'/>
+            <img src={ABG10} alt=""  className='frame-2-3'/>
+        </div>
+        <div style={{display:'flex',marginTop:'20px'}} className="in-animation4">
+            <img src={ABG11} alt="" className='frame-4'/>
+            <img src={ABG12} alt=""  className='frame-5'/>
+            <img src={ABG13} alt="" className='frame-6'/>
+        </div>
+    </div>
+    <div className="marquee">
+        <h1>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i>BE PART OF A THRIVING COMMUNITY, JOIN US! <i class="fas fa-motorcycle" style={{marginLeft:'10px', marginRight:'10px'}}></i></h1>
+    </div>
+    <div className='experience'>
+        <div>
+            <img src={ABG14} alt="" className='experience-img'/>
+            <div style={{position:'relative'}} >
+                    <div className="up" style={{position:'absolute'}}>
+                        <div className="in-animation4" id='experience-button'>
+                            <h5>GET STARTED</h5>
+                        </div>
+                    </div>
+                
+                <div style={{paddingTop:'150px',paddingLeft:'170px'}} className="in-animation4">
+                    <h1 className='experience-head'>
+                        Share Experiences, And Stay <br/>
+                        Connected
+                    </h1>
+                    <p style={{color:'white'}}>
+                        Whether you're a seasoned rider or just starting out, we've got you covered.
+                    </p>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <div className='home-fit'>
+        <div className='home-fit-div'>
+            <div className='home-fit-div1'>
+                <div className="in-animation5" id='home-fit-div2'>
+                    <div className='home-fit-main'>
+                        <h1>
+                        Be Part Of A Thriving Community
+                        </h1>
+                        <h6>
+                            Join us at ATM & Motorcycle and be part of a thriving community that celebrates the adrenaline-fueled sport of motocross. Whether you're seeking information, entertainment, or connection, we've got it all covered. </h6>
+                        <div className='home-fit-main-div'>
+                            <h5> EXPLORE MORE</h5>
+                        </div>
+                    </div> 
+                </div>
+                <div className="in-animation6">
+                    <img src={ABG15} alt="av" className='home-fit-img' />
+                </div>
+            </div>
+            <div style={{position:'absolute',marginTop:'300px'}} class="up">
+                <div className="in-animation4" id='home-fit-button'>
+                    <h5 className='home-fit-button-head'> <samp>GET STARTED</samp></h5>
+                </div>
+            </div>
+            <div class="in-animation4" id='home-fit-next-div'>
+                <h1>
+                    Our merchandise
+                </h1>
+                <p>
+                    We provide honest and detailed reviews of the latest bikes, accessories, and safety equipment.
+    
+                </p>
+            </div>
+        </div>
+        <div className='price'>
+            <div className="in-animation4">
+                <img src={ABG16} alt="uyt" className='price-img' />
+                <h5 className='price-head'>Moto Helmet Glossy Black</h5>
+                <h5 style={{color:'white'}}>$ 91.62 USD</h5>
+            </div>
+            <div className="in-animation4">
+                <img src={ABG17} alt="uyt" className='price-img' />
+                <h5 className='price-head'>Black Full Protection Set</h5>
+                <h5 style={{color:'white'}}>$ 67.23 USD</h5>
+            </div>
+            <div  className="in-animation4">
+                <img src={ABG18} alt="uyt" className='price-img'/>
+                <h5 className='price-head'>Moto Helmet And Glasses</h5>
+                <h5 style={{color:'white'}}>$ 8.52 USD</h5>
+            </div>
+            <div  className="in-animation4">
+
+                <img src={ABG19} alt="uyt" className='price-img' />
+                <h5 className='price-head'>Helmet And Glasses Orange</h5>
+                <div style={{display:'flex'}}>
+                    <h5 style={{color:'white'}}>$ 37.67 USD</h5>
+                    <h5 className='price-head2'>$ 7,721.71 USD</h5>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div className='home-location'>
+          
+                <img src={ABG20} alt="jh" className='home-location-img' />
+                <div style={{paddingTop:'140px'}} className="in-animation4">
+                    <div className='home-location-div'>
+                    </div>
+                    <img src={ABG21} alt="ASD" className='home-location-img2'/>
+                    <div className='home-location-content'>
+                        <div>
+                            <h5 className='home-locaton-head'>Find Us</h5>
+                            <p style={{marginTop:'15px'}}>14 Tottenham Road, London, England</p>
+                        </div>
+                        <div style={{marginTop:'40px'}}>
+                            <h5 className='home-location-head2'>Message Us</h5>
+                            <p style={{marginTop:'20px'}}>information@office.com <br />
+                                (704) 358-1528</p>
+                        </div>
+                        <div className='home-location-i'>
+                            <ion-icon name="logo-facebook" className='home-location-icon'></ion-icon>
+                            <ion-icon name="logo-instagram" className='home-location-icon'></ion-icon>
+                            <ion-icon name="logo-youtube" className='home-location-icon2'></ion-icon>
+                        </div>
+                    </div>
+                    <div style={{position:'absolute'}}>
+                        <i class="fas fa-location-dot" id='home-location-icon-main'></i>
+                    </div>
+                </div>   
+    </div>
+    <Footer />
+   
+    </>
+        
+  )
+}
+export default ATVhome;
