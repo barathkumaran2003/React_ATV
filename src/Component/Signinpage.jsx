@@ -22,20 +22,18 @@ import ABG19 from "../assets/A-BG19.jpg";
 import ABG20 from "../../public/A-BG20.png";
 import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
-import Navigationbar from "./Navigationbar";
-import { title } from "./Singup";
-function ATVhome() {
-  
+import S_Navbar from "./S_Navbar";
+
+function Signinpage() {
   return (
     <>
       <div className="bg">
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
-          <Navigationbar />
+          <S_Navbar />
           <div className="in-animation4">
             <div className="home-hero-h1">
-              <h1 className="home-hero-head">Passionate about motorcycles </h1>
-              <div>{title}</div>
+              <h1 className="home-hero-head">Passionate about motorcycles</h1>
             </div>
             <div className="home-hero-h1-sub">
               <p className="home-hero-para">
@@ -46,7 +44,7 @@ function ATVhome() {
               </p>
             </div>
             <div className="in-animation4" id="f-button">
-              <a href="/Exploremore" className="f-a">
+              <a href="/Loginpage" className="f-a">
                 EXPLORE MORE
               </a>
             </div>
@@ -91,7 +89,7 @@ function ATVhome() {
                   information, keeping you in the loop.
                 </h6>
                 <div className="in-animation4" id="e-button">
-                  <a href="/Exploremore" className="e-a">
+                  <a href="/Loginpage" className="e-a">
                     EXPLORE MORE
                   </a>
                 </div>
@@ -111,7 +109,7 @@ function ATVhome() {
                   fit for your needs.
                 </p>
                 <div className="in-animation4" id="e-button">
-                  <a href="/Service" className="e-a">
+                  <a href="/Loginpage" className="e-a">
                     EXPLORE MORE
                   </a>
                 </div>
@@ -141,7 +139,7 @@ function ATVhome() {
                   passion that drives the motocross community.
                 </p>
                 <div className="in-animation4" id="e-button">
-                  <a href="/News" className="e-a">
+                  <a href="/Loginpage" className="e-a">
                     EXPLORE MORE
                   </a>
                 </div>
@@ -183,7 +181,7 @@ function ATVhome() {
             </h1>
           </div>
           <div className="in-animation4" id="q-button">
-            <a href="/Contact" className="e-a">
+            <a href="/Loginpage" className="e-a">
               EXPLORE MORE
             </a>
           </div>
@@ -311,7 +309,7 @@ function ATVhome() {
               </p>
             </div>
             <div className="in-animation4" id="t-button">
-              <a href="/Contact" className="t-a">
+              <a href="/Loginpage" className="t-a">
                 Get started{" "}
               </a>
             </div>
@@ -331,7 +329,7 @@ function ATVhome() {
                   or connection, we've got it all covered.{" "}
                 </h6>
                 <div className="in-animation4" id="g-button">
-                  <a href="/Team" className="g-a">
+                  <a href="/Loginpage" className="g-a">
                     Get started{" "}
                   </a>
                 </div>
@@ -356,7 +354,7 @@ function ATVhome() {
             </div>
             <div class="up" style={{ marginLeft: "250px" }}>
               <div className="in-animation4" id="g-button">
-                <a href="/Team" className="g-a">
+                <a href="/Loginpage" className="g-a">
                   Get started{" "}
                 </a>
               </div>
@@ -432,4 +430,4 @@ function ATVhome() {
     </>
   );
 }
-export default ATVhome;
+export default Signinpage;

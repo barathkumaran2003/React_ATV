@@ -1,0 +1,78 @@
+.team-bg
+{
+    background-color:#f9f9fa;
+}
+.team-head h2{
+    color: #1e2837;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+}
+.team-head{
+    margin-top: 90px;
+
+}
+.t-price{
+    display: flex; width: 1100; height: 450px; margin-left: 175px;
+  }
+  .t-price .in-animation4
+  {
+    margin-left: 20px; position: relative;
+   
+  }
+  .t-head h2{
+    color: #1e2837;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+  }
+  .t-div
+  {
+    width: 100%;
+    display: flex;
+}
+.t-div1{
+    width: 50%;
+    margin-right: 15px;
+}
+.t-div2{
+    background-color: #1e2837;
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 20px 30px;
+    position: static;
+}
+.t-div3{
+    white-space: normal;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+}
+.t-div3 h6{
+    letter-spacing: 1.8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: rgb(255, 255, 255);
+}

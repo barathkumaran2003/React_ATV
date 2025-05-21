@@ -1,0 +1,108 @@
+.service{
+    background-color:#f9f9fa;
+}
+.service-div{
+    text-align: center;
+    width: 100%;
+}
+.service-list-2-item-image {
+    object-fit: cover;
+    border-radius: 30px;
+    width: auto;
+    height: 250px;
+}
+.service-list-2-item{
+    opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
+}
+.service-img
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+.service-img-head {
+    object-fit: cover;
+    
+}
+.service-img-para{
+    
+    width: 370px;
+    
+}
+
+  .s-home-fit-div1{
+    display: flex; position: absolute;
+    margin-top: 100px;
+  }
+  #s-home-fit-div2
+  {
+    width: 580px; margin-left: 185px
+  }
+  .s-home-fit-main{
+    width: 580px; margin-top: 30px;
+  }
+  .s-home-fit-main h1{
+    font-family: 'Fjalla One', sans-serif; color: #202b36; font-size: 40px; font-weight:bolder; letter-spacing: 5px; 
+  }
+  .s-home-fit-main h6{
+    color: #202b36; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-top: 20px; font-size: larger;
+  }
+  .s-home-fit-main-div
+  {
+    width: 170px; height: 50px; border-radius: 50px; background-color: aquamarine; text-align: center; margin-top: 30px;
+  }
+  .s-home-fit-main-div h5{
+    padding: 12px 12px; font-size: medium; font-family: Oswald, sans-serif;letter-spacing: 1px;
+  }
+  .s-home-fit-img
+  {
+    border-radius: 30px; width: 430px; height: 380px; margin-left: 140px;
+  }
+  .last-img{
+    width: 100%; 
+    display: flex;
+  }
+  .last-img-div{
+    margin-top: 600px;
+    width: 33.3%;
+    height: 100%;
+  }
+  .last-img-img{
+    object-fit: contain;
+    width: 100%; 
+    height: 10%;
+  }
+  .last-img-img-next{
+    object-fit:fill;
+    width: 100%; 
+    height: 384px;
+  }
+  .last-img-div-1{
+    margin-top: 600px;
+    width: 33.3%;
+    background-color: #68e5b2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button{
+    width: 100%;
+    justify-content: center; display: flex; align-items: center;
+  }
+  .button-div{
+   width: 150px; height: 50px; border-radius: 50px; background-color: #202b36; text-align: center; margin-top: 30px; justify-content: center; display: flex; align-items: center; color: white;
+  }
+  .button-head{
+     font-size:large; font-family: Oswald, sans-serif;letter-spacing: 1px; 
+  }
+  .button-div:hover{
+    background-color: #68e5b2;
+    color: #202b36;
+    border: 1px solid #202b36;
+    transform: translateY(-10px);
+    cursor: pointer;
+    transition: 0.5s;
+  }

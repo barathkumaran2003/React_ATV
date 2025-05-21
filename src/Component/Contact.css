@@ -1,0 +1,117 @@
+.contact-bg{
+    background-color:#f9f9fa;
+
+}
+.c-nav
+{
+    padding-top: 30px;
+    
+}
+.contact-title{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-top: 70px;
+    color: #1e2837;
+    font-family: Oswald, sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+.contact-form{
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-bottom: 10px;
+    display: flex
+
+}
+.contact-input{
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 16px 20px;
+    font-size: 16px;
+    transition: all .5s;
+    color: #333;
+
+    line-height: 1.42857;
+    display: block;
+}
+.c-div{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+.c-form
+{
+    margin-right: 80px;
+}
+.contact-text
+{
+    border: 1px solid white;
+    border-radius: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 100%;
+    margin-bottom: 30px;
+    padding: 16px 20px;
+    font-size: 16px;
+    transition: all .2s;
+    color: #333;
+    vertical-align: middle;
+    background-color: #fff;
+    line-height: 1.42857;
+    display: block;
+}
+.c-button
+{
+    border: 1px solid #68e5b2;
+    background-color: #68e5b2;  
+    color: #1e2837;
+    text-align: center;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 14px 24px;
+    font-family: Oswald, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .3s;
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+}
+.c-button:hover
+{
+    background-color: #1e2837;
+    border: 1px solid #1e2837;
+    color: #68e5b2;
+    border: 1px solid #68e5b2;
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+.c-text
+{
+    width: 470px;
+}
+.c-text h3{
+    color: var(--primary-dark);
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+.c-text h6{
+    color: #535353;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    font-family: Ubuntu, Helvetica, sans-serif;
+}
