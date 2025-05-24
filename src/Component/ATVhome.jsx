@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./Atv.css";
 import ABG1 from "../../public/A-BG1.png";
 import ABG2 from "../../public/A-BG2.png";
@@ -22,12 +22,55 @@ import ABG19 from "../assets/A-BG19.jpg";
 import ABG20 from "../../public/A-BG20.png";
 import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
+import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
-import { title } from "./Singup";
+console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
-  
-  return (
+   const [user, setUser] = useState('');
+   const [userDetails, setUserDetails] = useState({username: '',email: '',userType:''});
+ useEffect(() => {
+    setUser(localStorage.getItem("username"));
+    const get=localStorage.getItem("username");
+    console.log("Title from Singup:",user);
+    const fetchUserDetails = async () => {
+      try {
+        console.log("linkurl",user);
+        const response = await fetch(`http://localhost:5000/login?username=${get}`);
+        const data = await response.json();
+
+        // Extract only what you need
+        setUserDetails({
+          username: data.username,
+          email: data.email,
+          userType: data.userType,
+        });
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+      }
+    };
+
+    fetchUserDetails();
+
+  }, []);
+  //    
+
+  // const login = async () => {
+  //   try {
+  //     const data = await fetch(`http://localhost:5000/api/signin`);
+  //     const username = await data.json();
+  //     setUser(username.name);
+  //   } catch (error) {
+  //     console.error('Error fetching user data:', error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   login(); 
+  // }, []);
+
+    return (
     <>
+    
       <div className="bg">
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
@@ -35,15 +78,17 @@ function ATVhome() {
           <div className="in-animation4">
             <div className="home-hero-h1">
               <h1 className="home-hero-head">Passionate about motorcycles </h1>
-              <div>{title}</div>
+              
             </div>
             <div className="home-hero-h1-sub">
               <p className="home-hero-para">
                 Join us at ATM & Motorcycle and be part of a thriving community
                 that celebrates the adrenaline-fueled sport of motocross.
                 Whether you're seeking information, entertainment, or
-                connection, we've got it all covered.
+                connection, we've got it all covered. 
               </p>
+              <div style={{position:'absolute', backgroundColor:'white'}}>
+{userDetails.username} {userDetails.email}  {userDetails.userType}             </div>
             </div>
             <div className="in-animation4" id="f-button">
               <a href="/Exploremore" className="f-a">

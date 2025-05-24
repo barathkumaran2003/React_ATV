@@ -12,6 +12,7 @@ function Loginpage() {
       password: document.getElementById("password").value,
       email: document.getElementById("email").value,
       phonenumber: document.getElementById("phonenumber").value,
+      usertype: "user",
     };
 
     try {

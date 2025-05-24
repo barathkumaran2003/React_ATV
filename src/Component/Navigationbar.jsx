@@ -1,6 +1,29 @@
 import React from 'react'
 import './Atv.css';
 function Navigationbar () {
+   const [user, setUser] = useState('');
+     const [userDetails, setUserDetails] = useState('');
+   useEffect(() => {
+      setUser(localStorage.getItem("username"));
+      const get=localStorage.getItem("username");
+      console.log("Title from Singup:",user);
+      const fetchUserDetails = async () => {
+        try {
+          console.log("linkurl",user);
+          const response = await fetch(`http://localhost:5000/login?username=${get}`);
+          const data = await response.json();
+  
+          // Extract only what you need
+          setUserDetails(data.userType,);
+        } catch (error) {
+          console.error('Error fetching user details:', error);
+        }
+      };
+  
+      fetchUserDetails();
+  
+    }, []);
+    
   return (
      <div className='in-animation7'>
              <div className='home-nav-in'>

@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 let title="";
 
 function Singup() {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  const[user, setUser] = useState('');
+  console.log("user",user);
+
+  const newvalue=()=>
+  {
+    setUser(document.getElementById("username").value);
+    // title=document.getElementById("username").value
+  }
+
+  console.log("newuser",user);
+  localStorage.setItem("username",user)
+  console.log("local storage", localStorage.getItem("username"));
   const login = async (e) => {
     e.preventDefault();
 
@@ -14,7 +26,7 @@ function Singup() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch(`http://localhost:5000/login?username=${user}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -23,8 +35,9 @@ function Singup() {
       });
 
       const data = await response.json();
-      alert(data.message);
       title=data.name;
+      alert(`Welcome ${title}`);
+
 
       if (response.ok) {
         console.log("Logged in as:", data.name);
@@ -35,7 +48,6 @@ function Singup() {
       alert("Network error or server not reachable.");
     }
   };
-
   return (
     <div className="popup">
 <section>
@@ -307,7 +319,7 @@ function Singup() {
         <div className="form">
           <form action="/Home" onSubmit={login}>
             <div className="inputBox">
-            <input type="text" id='username' placeholder=" " required />
+            <input type="text" id='username' placeholder=" " required onChange={newvalue} />
             <i>Username</i>
           </div>
           <div className="inputBox">
@@ -325,11 +337,13 @@ function Singup() {
         </div>
       </div>
     </div>
+
   </section>
   
 </div>
   )
 }
+console.log("title",title);
 export { title };
 export default Singup;
 
