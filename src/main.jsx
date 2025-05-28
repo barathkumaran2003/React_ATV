@@ -12,7 +12,7 @@ import Loginpage from './Component/Loginpage.jsx';
 import Singup from './Component/Singup.jsx';
 import Review from './Component/Review.jsx';
 import Gallery from './Component/Gallery.jsx';
-import News from './Component/news.jsx';
+import Atvn from './Component/Atvn.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/News',
-    element: <News/>
+    element: <Atvn/>
   },
   {
     path: '/Contact',

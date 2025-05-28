@@ -6,7 +6,7 @@ import Navigationbar from "./Navigationbar";
 
 import "./News.css";
 import Footer from "./Footer";
-function News() { 
+function Atvn() { 
       const [dropdownOpen, setDropdownOpen] = useState(false);
   const [user, setUser] = useState('');
     const [addondata2, setAddondata2]=useState([]);
@@ -199,4 +199,4 @@ function News() {
     </>
   );
 }
-export default News;
+export default Atvn;
