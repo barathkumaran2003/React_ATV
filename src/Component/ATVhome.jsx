@@ -48,9 +48,9 @@ function ATVhome() {
         });
       } catch (error) {
         console.error('Error fetching user details:', error);
-      }
+      } 
     };
-
+    <AtvAnimation/>
     fetchUserDetails();
 
   }, []);
@@ -72,7 +72,6 @@ function ATVhome() {
 
     return (
     <>
-    <AtvAnimation/>
       <div className="bg">
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
