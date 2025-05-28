@@ -1,6 +1,5 @@
 import React from 'react'
 import './Team.css';
-import ABG36 from "../../public/A-BG38.WEBP";
 import ABG16 from "../../public/A-BG30.png";
 import ABG17 from "../../public/A-BG31.png";
 import ABG18 from "../../public/A-BG32.png";
@@ -13,7 +12,7 @@ function Team  () {
     <>
     <div className='team-bg'>
     <div className="news-div">
-          <img src={ABG36} alt="bg" className="n-bg1" />
+          <img src={ABG16} alt="bg" className="n-bg1" />
           <div style={{ position: "absolute", top: "20px" }}>
             <Navigationbar/>
             <h1 className="banner-title">Our Team</h1>
