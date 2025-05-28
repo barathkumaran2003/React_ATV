@@ -1,0 +1,311 @@
+.contact-bg{
+    background-color:#f9f9fa;
+
+}
+.c-nav
+{
+    padding-top: 30px;
+    
+}
+.contact-title{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-top: 70px;
+    color: #1e2837;
+    font-family: Oswald, sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+.contact-form{
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-bottom: 10px;
+    display: flex
+
+}
+.contact-input{
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 16px 20px;
+    font-size: 16px;
+    transition: all .5s;
+    color: #333;
+    line-height: 1.42857;
+    display: block;
+}
+.contact-input1{
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: auto;
+    margin-bottom: 0;
+    padding: 16px 20px;
+    font-size: 16px;
+    transition: all .5s;
+    color: #333;
+    width: 100%;
+    line-height: 1.42857;
+    display: block;
+}
+.c-div{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+.c-form
+{
+    margin-right: 80px;
+}
+.contact-text
+{
+    border: 1px solid white;
+    border-radius: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 100%;
+    margin-bottom: 30px;
+    padding: 16px 20px;
+    font-size: 16px;
+    transition: all .2s;
+    color: #333;
+    vertical-align: middle;
+    background-color: #fff;
+    line-height: 1.42857;
+    display: block;
+}
+.c-button
+{
+    border: 1px solid #68e5b2;
+    background-color: #68e5b2;  
+    color: #1e2837;
+    text-align: center;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 14px 24px;
+    font-family: Oswald, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .3s;
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+}
+.c-button:hover
+{
+    background-color: #1e2837;
+    border: 1px solid #1e2837;
+    color: #68e5b2;
+    border: 1px solid #68e5b2;
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+.c-text
+{
+    width: 470px;
+}
+.c-text h3{
+    color: var(--primary-dark);
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+.c-text h6{
+    color: #535353;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    font-family: Ubuntu, Helvetica, sans-serif;
+}
+.r-div1
+{
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+.r-div2{
+    z-index: 999;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: start;
+    width: 100%;
+    display: grid;
+    position: relative;
+}
+.r-div3{
+    background-color: #1e2837;
+    text-align: left;
+    border-radius: 30px;
+    flex-direction: column;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: block;
+    unicode-bidi: isolate
+}
+.r-div4
+{
+    color: #68e5b2;
+    font-family: "Fa solid 900", sans-serif;
+        box-sizing: border-box;
+            display: block;
+    unicode-bidi: isolate;
+    text-align: left;
+    user-select: auto;
+    cursor: auto;
+}
+
+.r-div4 img{
+    height: 30px;
+}
+.r-head{
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+        display: block;
+    margin-block-start: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+}
+.r-para
+{
+    color: white;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 300;
+        display: block;
+    margin-block-start: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-align: left;
+}
+.r-para2
+{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+        margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+        display: block;
+    margin-block-start: 1em;
+    text-align: left;
+    font-family: Ubuntu, Helvetica, sans-serif;
+}
+.r-date{
+        color: white;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+        margin-bottom: 10px;
+    line-height: 1.5em;
+    display: block;
+    margin-block-start: 1em;
+        margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-align: left;
+    font-family: Ubuntu, Helvetica, sans-serif;
+}
+.g-div1
+{
+    z-index: 10;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    overflow: hidden;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    display: grid;
+    box-sizing: border-box;
+}
+.g-div2{
+grid-area: span 1 / span 2 / span 1 / span 2;
+border-radius: 30px;
+    justify-content: center;
+    height: 280px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    color: white;
+    align-items: center;
+    line-height: 1.2em;
+    text-decoration: none;
+    background-color: #0000;
+        box-sizing: border-box;
+        line-height: 1.2em;
+}
+
+.g-img
+{
+        object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 0;
+        overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.g-div3{
+    grid-area: span 1 / span 1 / span 1 / span 1;
+border-radius: 30px;
+    justify-content: center;
+    height: 280px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    color: white;
+    align-items: center;
+    line-height: 1.2em;
+    text-decoration: none;
+    background-color: #0000;
+        box-sizing: border-box;
+        line-height: 1.2em;
+}

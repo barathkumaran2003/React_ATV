@@ -26,7 +26,7 @@ function Singup() {
     };
 
     try {
-      const response = await fetch(`http://localhost:5000/login?username=${user}`, {
+      const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

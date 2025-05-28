@@ -182,9 +182,9 @@ hr {
   margin-top: 24px;
   margin-left: 80px;
 }
-.search-bar {
+.search-bar1 {
   margin-top: 25px;
-  margin-left: 110px;
+  margin-left: 50px;
 }
 .home-nav-contact {
   width: 150px;
@@ -195,6 +195,74 @@ hr {
   border: 2px solid rgb(126, 126, 126);
   margin-left: 20px;
 }
+.profile-img{
+  display: flex;
+  width: 270px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.dropdown{
+  position: absolute;
+  height: 100px;
+  width: 150px;
+  border-radius: 20px;
+  background-color: white;
+  right: 0;
+  margin-right: 150px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+     letter-spacing: 1px;
+     padding-top: 20px;
+}
+.dropdown h5{
+      font-family: Oswald, sans-serif;
+}
+.dropdown-about{
+  position: absolute;
+  width: 150px;
+  border-radius: 20px;
+  background-color: white;
+  margin-right: 150px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: left; 
+  margin-left: 380px;
+     letter-spacing: 1px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+
+}
+.dropdown-about h5{
+      font-family: Oswald, sans-serif;
+      margin-left: 30px;
+
+
+}
+.dropdown-icon {
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.profile-img h5{
+  margin-left: 10px;
+  text-align: center;
+    font-family: Oswald, sans-serif;
+     letter-spacing: 1px;
+
+}
+.profile-img img
+{
+  width: 45px;
+  height:45px;
+}
+
 .home-nav-contact-h1 {
   color: rgb(0, 0, 0);
   margin-top: 12px;
@@ -204,9 +272,20 @@ hr {
 .home-nav-in-ul {
   text-decoration: none;
   color: black;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: lighter;
+  cursor: pointer;
+}
+.home-nav-in-ul1 {
+  text-decoration: none;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.home-nav-in-ul1:hover{
+  color:#68e5b2 ;
 }
 .search-bar-i {
   margin-top: 26px;

@@ -24,6 +24,8 @@ import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
+import AtvAnimation from '../../avt animation';
+
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
    const [user, setUser] = useState('');
@@ -35,7 +37,7 @@ function ATVhome() {
     const fetchUserDetails = async () => {
       try {
         console.log("linkurl",user);
-        const response = await fetch(`http://localhost:5000/login?username=${get}`);
+        const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${get}`);
         const data = await response.json();
 
         // Extract only what you need
@@ -70,7 +72,7 @@ function ATVhome() {
 
     return (
     <>
-    
+    <AtvAnimation/>
       <div className="bg">
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
@@ -401,7 +403,7 @@ function ATVhome() {
             </div>
             <div class="up" style={{ marginLeft: "250px" }}>
               <div className="in-animation4" id="g-button">
-                <a href="/Team" className="g-a">
+                <a href="/Shop" className="g-a">
                   Get started{" "}
                 </a>
               </div>
