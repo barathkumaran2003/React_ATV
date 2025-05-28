@@ -24,7 +24,7 @@ import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
-import AtvAnimation from '../../atvanimations';
+import AtvAnimation from './Animation';
 
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
