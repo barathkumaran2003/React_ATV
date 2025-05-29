@@ -24,7 +24,7 @@ import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
-import '../../animation';
+import PortfolioAnimation from '../../animation';
 
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
@@ -51,6 +51,10 @@ function ATVhome() {
       } 
     };
     fetchUserDetails();
+    console.log("Observed", entry.target, entry.isIntersecting);
+          // <PortfolioAnimation/>
+
+
 
   }, []);
   //    
@@ -71,10 +75,14 @@ function ATVhome() {
 
     return (
     <>
+    
+      <PortfolioAnimation/>
       <div className="bg">
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
           <Navigationbar />
+                      
+
           <div className="in-animation4">
             <div className="home-hero-h1">
               <h1 className="home-hero-head">Passionate about motorcycles </h1>
@@ -90,7 +98,7 @@ function ATVhome() {
               <div style={{position:'absolute', backgroundColor:'white'}}>
 {userDetails.username} {userDetails.email}  {userDetails.userType}             </div>
             </div>
-            <div className="in-animation4" id="f-button">
+            <div  id="f-button">
               <a href="/Exploremore" className="f-a">
                 EXPLORE MORE
               </a>
@@ -98,7 +106,7 @@ function ATVhome() {
           </div>
         </div>
         <div className="bg2"></div>
-        <div className="in-animation7" id="contact">
+        <div  id="contact">
           <div className="contact-div">
             <i class="fas fa-phone-volume" id="contact-phone"></i>
             <p className="contact-number"> (+91) 94429-51070</p>``

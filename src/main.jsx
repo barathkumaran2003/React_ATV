@@ -13,7 +13,7 @@ import Singup from './Component/Singup.jsx';
 import Review from './Component/Review.jsx';
 import Gallery from './Component/Gallery.jsx';
 import Atvn from './Component/Atvn.jsx';
-
+import '../animation.js'
 const router = createBrowserRouter([
   {
     path: '/',
