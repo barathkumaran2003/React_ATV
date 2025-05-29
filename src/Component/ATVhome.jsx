@@ -98,8 +98,7 @@ function ATVhome() {
                 Whether you're seeking information, entertainment, or
                 connection, we've got it all covered. 
               </p>
-              <div style={{position:'absolute', backgroundColor:'white'}}>
-{userDetails.username} {userDetails.email}  {userDetails.userType}             </div>
+              
             </div>
             </div>
             <div className="in-animation41" id="f-button">
