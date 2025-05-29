@@ -31,7 +31,7 @@ function Signinpage() {
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
           <S_Navbar />
-          <div className="in-animation4">
+          <div className="in-animation41">
             <div className="home-hero-h1">
               <h1 className="home-hero-head">Passionate about motorcycles</h1>
             </div>

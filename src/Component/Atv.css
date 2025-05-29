@@ -58,7 +58,7 @@ hr {
 }
 
 .in-animation4 {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
@@ -68,7 +68,7 @@ hr {
   transform: translateY(0);
 }
 .in-animation5 {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
@@ -78,7 +78,7 @@ hr {
   transform: translateX(0);
 }
 .in-animation6 {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
@@ -88,7 +88,7 @@ hr {
   transform: translateX(0);
 }
 .in-animation7 {
-  opacity: 0;
+  opacity: 1;
   transform: scale(0.8);
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
@@ -98,7 +98,7 @@ hr {
   transform: scale(1);
 }
 .in-animation8 {
-  opacity: 0;
+  opacity: 1;
   transform: scale(0.8);
   transition: transform 0.3s ease-out, opacity 1s ease-out;
 }

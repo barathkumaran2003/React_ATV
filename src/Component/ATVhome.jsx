@@ -24,7 +24,7 @@ import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
-import AtvAnimation from './Animation';
+import '../../animation';
 
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
@@ -71,7 +71,6 @@ function ATVhome() {
 
     return (
     <>
-        <AtvAnimation/>
       <div className="bg">
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
