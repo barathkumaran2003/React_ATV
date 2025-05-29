@@ -57,17 +57,16 @@ hr {
   margin: 20px 0; /* Spacing above and below the line */
 }
 
-.in-animation4 {
+.in-animation412 {
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
-.in-animation4.visible {
+.in-animation41.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-.in-animation5 {
+.in-animation51 {
   opacity: 0;
   transform: translateX(-100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -76,18 +75,16 @@ hr {
   opacity: 1;
   transform: translateX(0);
 }
-
-.in-animation6 {
+.in-animation61 {
   opacity: 0;
   transform: translateX(100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
-.in-animation6.visible {
+.in-animation61.visible {
   opacity: 1;
   transform: translateX(0);
 }
-
-.in-animation7 {
+.in-animation71 {
   opacity: 0;
   transform: scale(0.8);
   transition: transform 1s ease-out, opacity 1s ease-out;
@@ -96,8 +93,7 @@ hr {
   opacity: 1;
   transform: scale(1);
 }
-
-.in-animation8 {
+.in-animation81 {
   opacity: 0;
   transform: scale(0.8);
   transition: transform 0.3s ease-out, opacity 1s ease-out;
@@ -106,7 +102,6 @@ hr {
   opacity: 1;
   transform: scale(1);
 }
-
 #home-hero-head-up {
   background-color: aquamarine;
   transition: 1s;

@@ -24,13 +24,15 @@ import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
-import PortfolioAnimation from '../../animation';
 
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
    const [user, setUser] = useState('');
    const [userDetails, setUserDetails] = useState({username: '',email: '',userType:''});
+     const [visible, setVisible] = useState(false);
+
  useEffect(() => {
+    setVisible(true);
     setUser(localStorage.getItem("username"));
     const get=localStorage.getItem("username");
     console.log("Title from Singup:",user);
@@ -51,7 +53,6 @@ function ATVhome() {
       } 
     };
     fetchUserDetails();
-    console.log("Observed", entry.target, entry.isIntersecting);
           // <PortfolioAnimation/>
 
 
@@ -76,15 +77,17 @@ function ATVhome() {
     return (
     <>
     
-      <PortfolioAnimation/>
       <div className="bg">
+              {/* <PortfolioAnimation/> */}
+
         <img src={ABG1} alt="bg" className="A-bg1" />
         <div className="home-nav">
           <Navigationbar />
                       
 
-          <div className="in-animation4">
-            <div className="home-hero-h1">
+          <div className="in-animation41">
+            <div className='in-animation41'>
+              <div className="home-hero-h1">
               <h1 className="home-hero-head">Passionate about motorcycles </h1>
               
             </div>
@@ -98,7 +101,8 @@ function ATVhome() {
               <div style={{position:'absolute', backgroundColor:'white'}}>
 {userDetails.username} {userDetails.email}  {userDetails.userType}             </div>
             </div>
-            <div  id="f-button">
+            </div>
+            <div className="in-animation41" id="f-button">
               <a href="/Exploremore" className="f-a">
                 EXPLORE MORE
               </a>
@@ -106,7 +110,7 @@ function ATVhome() {
           </div>
         </div>
         <div className="bg2"></div>
-        <div  id="contact">
+        <div className="in-animation7" id="contact">
           <div className="contact-div">
             <i class="fas fa-phone-volume" id="contact-phone"></i>
             <p className="contact-number"> (+91) 94429-51070</p>``

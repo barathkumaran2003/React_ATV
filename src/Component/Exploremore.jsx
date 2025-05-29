@@ -90,7 +90,7 @@ const CountUpSection = () => {
         <img src={ABG26} alt="bg" className="A-bg1" />
         <div className="home-nav">
           <Navigationbar />
-          <div class="in-animation4">
+          <div class="in-animation41">
             <div className="home-hero-h1">
               <h1 className="home-hero-head">About Us</h1>
             </div>
@@ -101,7 +101,7 @@ const CountUpSection = () => {
               </p>
             </div>
             <div className="up">
-              <div className="in-animation4" id="home-hero-head-up">
+              <div className="in-animation41" id="home-hero-head-up">
                 <a href="/Exploremore">
                   <h5>EXPLORE MORE</h5>
                 </a>
@@ -118,7 +118,7 @@ const CountUpSection = () => {
             </h5>
           </div>
         </div>
-        <div class="in-animation4" id="e-home-fit-next-div">
+        <div class="in-animation41" id="e-home-fit-next-div">
           <h1>We live and breathe motocross</h1>
           <p>
             What sets us apart is our deep understanding of the motocross
