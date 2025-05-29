@@ -12,7 +12,7 @@ function Team  () {
     <>
     <div className='team-bg'>
     <div className="news-div">
-          <img src={ABG16} alt="bg" className="n-bg1" />
+          <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b595b6654493327b558236_joe-neric-HHunRG19kF8-unsplash.jpg" alt="bg" className="n-bg1" />
           <div style={{ position: "absolute", top: "20px" }}>
             <Navigationbar/>
             <h1 className="banner-title">Our Team</h1>

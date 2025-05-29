@@ -9,10 +9,47 @@ import user1 from "../../public/user.png";
 function Navigationbar () {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [show,setShow]=useState(false);
+    const [alldown,setAlldown]=useState(false);
+    const [news,setNews]=useState(false);
    const [user, setUser] = useState('');
    const [userDetails, setUserDetails] = useState({username:'',userType:''});
    const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
-   const showoption=()=>setShow(!show); 
+   const about=()=>
+   {
+      setShow(true);
+      setNews(false);
+          setAlldown(false);
+
+   }
+   const newsdown=()=>
+   {
+      setNews(true)
+      setShow(false);
+          setAlldown(false);
+
+
+   }
+   const allpages=()=>
+   {
+      setAlldown(true);
+       setShow(false);
+    setNews(false);
+
+   }
+
+   const closeall=()=>
+   {
+      setShow(false);
+    setNews(false);
+    setAlldown(false);
+   }
+   
+   const showoption=()=>{
+    setShow(false);
+    setNews(false);
+    setAlldown(false);
+   } 
+
    useEffect(() => {
       setUser(localStorage.getItem("username"));
       const get=localStorage.getItem("username");
@@ -39,7 +76,7 @@ function Navigationbar () {
     
   return (
 
-     <div className='in-animation7'>
+     <div className='in-animation7' onMouseLeave={showoption}>
              <div className='home-nav-in'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 26" fill="none" className='home-nav-svg'>
                         <path d="M0.481567 24.7061L5.3471 0.378467H10.0925L14.958 24.7061H10.8434L9.88226 19.0898H5.64744L4.65632 24.7061H0.481567ZM6.09796 16.2665H9.40172L7.74984 6.05492L6.09796 16.2665Z" fill="black"/>
@@ -58,11 +95,11 @@ function Navigationbar () {
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M52.4914 25.0365C51.3701 25.0365 50.389 24.8063 49.548 24.3457C48.7271 23.8652 48.0863 23.2044 47.6258 22.3635C47.1853 21.5025 46.9651 20.5014 46.9651 19.3601C46.9651 17.8183 47.2954 16.4768 47.9562 15.3355C48.637 14.1942 49.4779 13.143 50.4791 12.1819C50.0986 11.4611 49.7082 10.7403 49.3077 10.0194C48.9073 9.27859 48.5769 8.52774 48.3166 7.76687C48.0563 7.00601 47.9262 6.23513 47.9262 5.45424C47.9262 4.41306 48.1364 3.49201 48.5569 2.6911C48.9774 1.89019 49.578 1.25947 50.3589 0.798945C51.1398 0.318399 52.0809 0.078125 53.1821 0.078125C54.2033 0.078125 55.0943 0.278354 55.8552 0.67881C56.6361 1.07927 57.2568 1.64991 57.7173 2.39076C58.1778 3.11158 58.4081 3.96254 58.4081 4.94366C58.4081 6.02489 58.1678 7.02603 57.6873 7.94708C57.2267 8.86813 56.6661 9.70908 56.0054 10.4699C55.3446 11.2108 54.7039 11.9016 54.0832 12.5423L57.3269 18.0986C57.5271 17.7382 57.6973 17.2777 57.8374 16.7171C57.9776 16.1564 58.0877 15.5557 58.1678 14.915C58.2679 14.2743 58.338 13.6836 58.3781 13.143H61.6217C61.6217 14.1241 61.5216 15.0552 61.3214 15.9362C61.1412 16.8172 60.8909 17.6381 60.5705 18.399C60.2502 19.1398 59.8998 19.8306 59.5194 20.4713C59.7596 20.7516 60.07 21.0019 60.4504 21.2222C60.8509 21.4224 61.2713 21.5325 61.7118 21.5526V25.0065C61.5917 25.0265 61.4716 25.0365 61.3514 25.0365C61.2513 25.0565 61.1512 25.0666 61.0511 25.0666C60.5105 25.0465 60.0099 24.9264 59.5494 24.7061C59.0889 24.4659 58.6684 24.1755 58.288 23.8352C57.9075 23.4948 57.5671 23.1544 57.2668 22.814C56.7462 23.4747 56.0854 24.0154 55.2845 24.4358C54.4836 24.8363 53.5526 25.0365 52.4914 25.0365ZM54.1432 21.5826C53.7027 21.8829 53.1821 22.0331 52.5815 22.0331C52.1009 22.0331 51.7105 21.913 51.4101 21.6727C51.1098 21.4124 50.8895 21.072 50.7494 20.6515C50.6092 20.211 50.5391 19.7505 50.5391 19.27C50.5391 18.4891 50.6593 17.7382 50.8995 17.0174C51.1398 16.2766 51.4902 15.5758 51.9507 14.915L55.2845 20.5314C54.9642 20.9319 54.5837 21.2822 54.1432 21.5826ZM53.8129 8.78803C53.4925 9.40874 53.1621 9.93934 52.8217 10.3798C52.5214 9.65903 52.2311 8.87814 51.9507 8.03718C51.6704 7.1762 51.5303 6.31522 51.5303 5.45424C51.5303 4.81351 51.6704 4.2729 51.9507 3.8324C52.2311 3.37187 52.6515 3.14161 53.2122 3.14161C53.6927 3.14161 54.0932 3.30179 54.4135 3.62216C54.7339 3.9225 54.8941 4.34298 54.8941 4.88359C54.8941 5.5043 54.794 6.15504 54.5938 6.83581C54.3935 7.51659 54.1332 8.16733 53.8129 8.78803Z" fill="#68E5B2"/>
                     </svg>
                     <li className='home-nav-in-li'>
-                    <ul><a href="/Home" className='home-nav-in-ul1'>Home</a></ul>
-                    <ul><a className='home-nav-in-ul1' onMouseOver={showoption} onMouseLeave={showoption}>About Us</a></ul>
-                    <ul><a href="/Service" className='home-nav-in-ul1'>Service</a></ul>
-                    <ul><a href="#ABOUT" className='home-nav-in-ul1'>News</a></ul>
-                    <ul><a href="#ABOUT" className='home-nav-in-ul1'>All pages</a></ul>
+                    <ul><a href="/Home" className='home-nav-in-ul1' onMouseOver={closeall}>Home</a></ul>
+                    <ul><a className='home-nav-in-ul1' onMouseOver={about} >About Us</a></ul>
+                    <ul><a href="/Service" className='home-nav-in-ul1' onMouseOver={closeall}>Service</a></ul>
+                    <ul><a className='home-nav-in-ul1' onMouseOver={newsdown} >News</a></ul>
+                    <ul><a className='home-nav-in-ul1' onMouseOver={allpages}>All pages</a></ul>
                     </li>
                     <div className='search-bar1'>
                         <a href=""><svg className="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21">
@@ -98,14 +135,16 @@ function Navigationbar () {
                 </button> */}
                 <div>
                     <h5>Profile</h5>
-                <h5>Log out</h5>
+                    <a href="/" style={{textDecoration:'none',color:'black'}}><h5>Log out</h5></a>
+                
                 </div>
                 
               </div>
                           
             )}
-            {show &&  (
-              <div className="dropdown-about" onMouseEnter={showoption} onMouseLeave={showoption}>
+            {show ?  (
+              
+              <div className="dropdown-about">
                 {/* <Link to="" className="dropdown-item">
                   Profile
                 </Link> */}
@@ -113,17 +152,162 @@ function Navigationbar () {
                   Logout
                 </button> */}
                 <div>
-                    <h5>About us</h5>
-                <h5>Gallery</h5>
-                <h5>Our Team</h5>
-                <h5>Testimonial</h5>
+                  <div className='dropdown-div'>
+                    <div>
+
+                    </div>
+                    <a href="/Exploremore" style={{textDecoration:'none',color:'black'}}> <h5>About us</h5></a>
+                   
+                  </div>
+                  <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Gallery" style={{textDecoration:'none',color:'black'}}>                <h5>Gallery</h5>
+</a>
+                  </div>
+                  <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Team" style={{textDecoration:'none',color:'black'}}>                <h5>Our Team</h5>
+</a>
+
+                  </div>
+                  <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Review" style={{textDecoration:'none',color:'black'}}>                <h5>Testimonial</h5>
+</a>
+
+                  </div>
 
 
                 </div>
                 
               </div>
                           
-            )}
+            ):
+            (<div></div>
+              )
+            }
+            {news ?  (
+              
+              <div className="dropdown-news">
+                {/* <Link to="" className="dropdown-item">
+                  Profile
+                </Link> */}
+                {/* <button className="dropdown-item logout-btn">
+                  Logout
+                </button> */}
+                <div>
+                   <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/News" style={{textDecoration:'none',color:'black'}}>                    <h5>News</h5>
+</a>
+                    </div>
+                
+
+
+                </div>
+                
+              </div>
+                          
+            ):
+            (<div></div>
+              )
+            }
+            {alldown ?  (
+              
+              <div className="dropdown-all">
+                {/* <Link to="" className="dropdown-item">
+                  Profile
+                </Link> */}
+                {/* <button className="dropdown-item logout-btn">
+                  Logout
+                </button> */}
+                <div style={{display:'flex'}}>
+                  <div>
+                    <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Home" style={{textDecoration:'none',color:'black'}}>                      <h5>Home</h5>
+</a>
+                      </div>
+                     <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Exploremore" style={{textDecoration:'none',color:'black'}}>                      <h5>About us</h5>
+</a>
+                      </div>
+                       <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Service" style={{textDecoration:'none',color:'black'}}>                <h5>Our Service</h5>
+</a>
+                </div>
+                 <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Team" style={{textDecoration:'none',color:'black'}}>                <h5>Our Team</h5>
+</a>
+                </div>
+                 <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Gallery" style={{textDecoration:'none',color:'black'}}>                <h5>Gallery</h5>
+</a>
+                </div>
+                  </div>
+                  <div>
+                     <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Review" style={{textDecoration:'none',color:'black'}}>                      <h5>Testimonials</h5>
+</a>
+                      </div>
+                       <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/Contact" style={{textDecoration:'none',color:'black'}}>                <h5>Contact Us</h5>
+</a>
+                </div>
+                 <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="/News" style={{textDecoration:'none',color:'black'}}>                <h5>News</h5>
+</a>
+                </div>
+                 <div className='dropdown-div'>
+                    <div>
+                      
+                    </div>
+                    <a href="Shop" style={{textDecoration:'none',color:'black'}}>                <h5>Shop</h5>
+</a>
+                </div>
+                  </div>
+                    
+
+
+                </div>
+                
+              </div>
+                          
+            ):
+            (<div></div>
+              )
+            }
             
 
               </div>

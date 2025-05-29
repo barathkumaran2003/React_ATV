@@ -232,12 +232,85 @@ hr {
      padding-bottom: 20px;
 
 }
-.dropdown-about h5{
-      font-family: Oswald, sans-serif;
-      margin-left: 30px;
 
+.dropdown-news{
+  position: absolute;
+  width: 150px;
+  border-radius: 20px;
+  background-color: white;
+  margin-right: 150px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: left; 
+  margin-left: 580px;
+     letter-spacing: 1px;
+     padding-top: 20px;
+     padding-bottom: 20px;
 
 }
+.dropdown-news h5{
+   font-family: Oswald, sans-serif;
+         margin-left: 5px;
+
+}
+.dropdown-about h5{
+      font-family: Oswald, sans-serif;
+      margin-left: 5px;
+
+}
+
+
+.dropdown-all{
+  position: absolute;
+  border-radius: 20px;
+  background-color: white;
+  margin-right: 150px;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: left; 
+  margin-left: 650px;
+     letter-spacing: 1px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     padding-right: 20px;
+
+}
+.dropdown-all h5{
+   font-family: Oswald, sans-serif;
+      margin-left: 5px;
+      
+}
+.dropdown-div
+{
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s;
+  
+}
+.dropdown-div div{
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.dropdown-div :hover
+{
+    color: #68e5b2;
+      transition: all 0.5s;
+
+}
+.dropdown-div:hover div{
+  width: 20px;
+  height: 5px;
+  background-color: #68e5b2;
+    transition: all 0.5s;
+
+}
+
+
 .dropdown-icon {
   font-size: 0.9rem;
   color: #333;
