@@ -77,7 +77,7 @@ function Atvn() {
       throw new Error(`Server Error: ${errorData}`);
     }
     const getdata = await response.json();
-    alert(getdata.heading); // Only if fetch was successful
+    alert("News added successfully"); // Only if fetch was successful
 
     // Assuming the server returns an array of news items
     setAddondata2(prev => [
@@ -113,10 +113,10 @@ function Atvn() {
       <img src={item.imglink} alt="news" className="w-img" />
     </div>
     <div className="w-text-div">
-      <h5>{item.newdata}</h5>
+      <p>{item.newdata}</p>
       <h3>{item.newhead}</h3>
-      <h5>{item.newdetails}</h5>
-      <p>Read Full post</p>
+      <p>{item.newdetails}</p>
+      <p style={{color:'#68e5b2'}}>Read Full post</p>
     </div>
   </div>
 ))}
@@ -151,49 +151,86 @@ function Atvn() {
           </div>
           
         </div>
-        {/* <div className="whole-div" style={{ marginBottom: "100px" }}>
-          
-            <div className="part-div">
-              <div className="w-img-div">
-                <img src={ABG34} alt="AS" className="w-img" />
-              </div>
-              <div className="w-text-div"> 
-                <h5>July 18, 2023</h5>
-                <h3>Nutrition and Fitness Tips  <br />for Riders</h3>
-                <h5>While the thrill of riding is undeniable, <br />it's crucial to prioritize safety on and <br /> off the track.</h5>
-                <p>Read Full post</p>
-              </div>
-              
-            </div>
-            <div className="part-div">
-              <div className="w-img-div">
-                <img src={ABG36} alt="AS" className="w-img" />
-              </div>
-              <div className="w-text-div"> 
-                <h5>July 18, 2023</h5>
-                <h3>Nutrition and Fitness Tips  <br />for Riders</h3>
-                <h5>While the thrill of riding is undeniable, <br />it's crucial to prioritize safety on and <br /> off the track.</h5>
-                <p>Read Full post</p>
-              </div>
-              
-            </div>
-            <div className="part-div">
-              <div className="w-img-div">
-                <img src={ABG35} alt="AS" className="w-img" />
-              </div>
-              <div className="w-text-div"> 
-                <h5>July 18, 2023</h5>
-                <h3>Nutrition and Fitness Tips  <br />for Riders</h3>
-                <h5>While the thrill of riding is undeniable, <br />it's crucial to prioritize safety on and <br /> off the track.</h5>
-                <p>Read Full post</p>
-              </div>
-              
-            </div>
-          
-          
-           
-          
-        </div> */}
+       
+      <div className="marquee">
+        <h1>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+        </h1>
+      </div>
       </div>
       <Footer />
     </>

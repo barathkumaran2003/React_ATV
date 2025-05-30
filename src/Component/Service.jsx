@@ -19,7 +19,7 @@ function Service() {
       <div className="service">
         <Navigationbar />
         <div className="service-div">
-          <h1>Service</h1>
+          <h1 className="contact-title">Services</h1>
           <p>
             Get ready to hit the track and embrace the adrenaline-fueled sport!
           </p>
@@ -28,7 +28,7 @@ function Service() {
           <div style={{ marginRight: "15px" }}>
             <img src={ABG5} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
-              <h5>Race Registration and Ticketing</h5>
+              <h3>Race Registration and Ticketing</h3>
             </div>
             <div className="service-img-para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,7 +38,7 @@ function Service() {
           <div style={{ marginRight: "15px" }}>
             <img src={ABG4} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
-              <h5>Race Registration and Ticketing</h5>
+              <h3>Race Registration and Ticketing</h3>
             </div>
             <div className="service-img-para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -48,7 +48,7 @@ function Service() {
           <div style={{ marginRight: "15px" }}>
             <img src={ABG13} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
-              <h5>Race Registration and Ticketing</h5>
+              <h3>Race Registration and Ticketing</h3>
             </div>
             <div className="service-img-para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -60,7 +60,7 @@ function Service() {
           <div style={{ marginRight: "15px" }}>
             <img src={ABG34} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
-              <h5>Race Registration and Ticketing</h5>
+              <h3>Race Registration and Ticketing</h3>
             </div>
             <div className="service-img-para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -70,7 +70,7 @@ function Service() {
           <div style={{ marginRight: "15px" }}>
             <img src={ABG2} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
-              <h5>Race Registration and Ticketing</h5>
+              <h3>Race Registration and Ticketing</h3>
             </div>
             <div className="service-img-para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -80,7 +80,7 @@ function Service() {
           <div style={{ marginRight: "15px" }}>
             <img src={ABG7} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
-              <h5>Race Registration and Ticketing</h5>
+              <h3>Race Registration and Ticketing</h3>
             </div>
             <div className="service-img-para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -107,3 +107,15 @@ cursor: pointer;
     transform: scale(1.05);
     transition: 0.5s;
 }
+.w-text-div h3{
+        font-family: Oswald, sans-serif;
+        margin-bottom: 20px;
+        cursor: pointer;
+}
+.w-text-div h3:hover
+{
+    color: #68e5b2;
+}
+.w-text-div p{
+    font-family: Ubuntu, Helvetica, sans-serif;
+}

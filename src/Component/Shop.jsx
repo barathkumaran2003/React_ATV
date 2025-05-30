@@ -8,11 +8,16 @@ import ABG18 from "../assets/A-BG18.jpg";
 import ABG19 from "../assets/A-BG19.jpg";
 import ABG14 from "../../public/A-BG14.png";
 import Footer from "./Footer";
+import Pen from "../../public/compose.png"
+import trash from "../../public/delete.png"
 import plus from "../../public/plus.png";
 
 function Shop() {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [editformOpen, setEditFormOpen] = useState(false);
+  const [cartformOpen, setCartFormOpen] = useState(false);
+  const cartformdown=()=>setCartFormOpen(true);
+  const cartformup=()=>setCartFormOpen(false)
   const addnews = () => setDropdownOpen(!dropdownOpen);
   const canceledit = () => setEditFormOpen(!editformOpen);
   const [addondata, setAddondata] = useState([]);
@@ -28,6 +33,8 @@ function Shop() {
     product: "",
     sprice: "",
   });
+
+   const [addcartproduct, setAddcartproduct] = useState([]);
 
   const fetchNewsList = async () => {
     try {
@@ -72,6 +79,27 @@ function Shop() {
     fetchNewsList();
   }, []);
   
+
+  const addtocart=async(imgurl,product,sprice)=>
+    
+  {
+      const cartdata={
+        imgurl1:imgurl,
+        product1:product,
+        sprice1:sprice,
+      }
+        setAddcartproduct((prevCart) => [...prevCart, cartdata]);
+
+  }
+
+  const handleDelete = (indexToDelete) => {
+  setAddcartproduct((prevCart) =>
+    prevCart.filter((_, index) => index !== indexToDelete)
+  );
+  
+};
+
+
    const edit= 
      async(product) =>
     
@@ -112,7 +140,7 @@ function Shop() {
         body: JSON.stringify(shopdatan),
       });
       if (response.ok) {
-        alert("Shop data saved successfully")
+        // alert("Shop data saved successfully")
       } else {
         console.error("Failed to save shop data");
       }
@@ -182,7 +210,53 @@ function Shop() {
         <div className="news-div">
           <img src={ABG20} alt="bg" className="n-bg1" />
           <div style={{ position: "absolute", top: "20px" }}>
+            {cartformOpen&&(
+              <div className="addtocartdiv">
+              <div className="addtocartdiv1">
+                  <h5 className="addcarthead">
+                          Your Cart
+                  </h5>
+                  <h6 onClick={cartformup} style={{cursor:'pointer'}}>
+                    X
+                  </h6>
+              </div>
+              <div className="cartproduct">
+                {addcartproduct.map((item,index)=>(
+                  <div key={index} className="cartproduct1">
+                    <img src={item.imgurl1} alt="" />
+                    <div className="cartproduct2">
+                      <div className="productname">{item.product1}</div>
+                      <div className="productprice">{item.sprice1}</div>
+                      <div  onClick={() => handleDelete(index)} style={{ cursor: 'pointer'}}>
+                        {/* delet */}
+                                          <img src={trash} alt="" className="trashbutton-add" style={{width:'20px',height:'20px'}} onClick={() => handleDelete(index)} />
+
+                      </div>
+                    </div>
+                                    <input type="number"  className="productcount"/>
+
+                </div>
+                ))}
+                <div className="total">
+                  <div className="total1">
+                    <div>
+                      Subtotal
+                    </div>
+                    <div>
+                      $ 187.26 USD
+                    </div>
+
+                  </div>
+                                <input type="submit" className="c-button" value={"Buy"} />
+
+
+                </div>
+                
+              </div>
+            </div>
+            )}
             <Navigationbar />
+            
             <h1 className="banner-title">Shop</h1>
           </div>
         </div>
@@ -222,18 +296,29 @@ function Shop() {
                     <img src={item.imgurl} alt="uyt" className="price-img" />
                   {userDetails.userType == "admin" && (
                     <>
-                    <div style={{position: "absolute", color: "white", cursor: "pointer", top:0}} onClick={()=> edit(item.product)}>
-                    edit
+                    <div style={{position: "absolute", color: "white", top:0}} >
+                      <img src={Pen} alt="" className="penbutton"  onClick={()=> edit(item.product)} />
                   </div>
-                  <div style={{position: "absolute", color: "white", cursor: "pointer", top:'30px'}} onClick={()=> deleteproduct(item.product)}>
-                    delet
+                  <div style={{position: "absolute", color: "white", top:'30px'}} >
+                  <img src={trash} alt="" className="trashbutton" onClick={()=> deleteproduct(item.product)} />
+
                   </div>   
+
                     </>
                   )}
-                  {userDetails.userType == "user" && (
-                    <div style={{position: "absolute", color: "white", cursor: "pointer", top:0}}>
-                      buy
+                  {userDetails.userType == "admin" && "user" && (
+                    <>
+                    <div style={{position: "absolute", color: "white", cursor: "pointer", bottom:0}} onClick={()=> addtocart(item.imgurl, item.product,item.sprice)} onMouseOver={cartformdown}>
+                      <h5 className="g-shop">Add to cart</h5>
                     </div>
+                    {/* <div className="in-animation4" id="g-shop-button">
+                <a href="/Shop" className="g-shop">
+                  Get started{" "}
+                </a>
+              </div> */}
+                    </>
+                    
+                    
                   )
 
                   }
@@ -303,6 +388,85 @@ function Shop() {
           </div>
           
         </div>
+        <div className="marquee">
+        <h1>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+          BE PART OF A THRIVING COMMUNITY, JOIN US!{" "}
+          <i
+            class="fas fa-motorcycle"
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          ></i>
+        </h1>
+      </div>
         <div className="experience">
           <div>
             <img src={ABG14} alt="" className="experience-img" />
@@ -336,6 +500,7 @@ function Shop() {
             </div>
           </div>
         </div>
+        
         <div style={{ position: "relative" }}>
           {" "}
           <Footer />
