@@ -306,7 +306,23 @@ function Shop() {
 
                     </>
                   )}
-                  {userDetails.userType == "admin" && "user" && (
+                  {userDetails.userType == "admin" && (
+                    <>
+                    <div style={{position: "absolute", color: "white", cursor: "pointer", bottom:0}} onClick={()=> addtocart(item.imgurl, item.product,item.sprice)} onMouseOver={cartformdown}>
+                      <h5 className="g-shop">Add to cart</h5>
+                    </div>
+                    {/* <div className="in-animation4" id="g-shop-button">
+                <a href="/Shop" className="g-shop">
+                  Get started{" "}
+                </a>
+              </div> */}
+                    </>
+                    
+                    
+                  )
+
+                  }
+                  {userDetails.userType =="user" && (
                     <>
                     <div style={{position: "absolute", color: "white", cursor: "pointer", bottom:0}} onClick={()=> addtocart(item.imgurl, item.product,item.sprice)} onMouseOver={cartformdown}>
                       <h5 className="g-shop">Add to cart</h5>
