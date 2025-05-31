@@ -27,7 +27,7 @@ function S_Navbar () {
                     </svg>
                     <li className='home-nav-in-li'>
                     <ul><a href="#ABOUT" className='home-nav-in-ul'>Demo</a></ul>
-                    <ul><a href="#ABOUT" className='home-nav-in-ul'>About Us</a></ul>
+                    <ul><a href="#ABOUT" className='home-nav-in-ul' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>About Us</a></ul>
                     <ul><a href="#ABOUT" className='home-nav-in-ul'>Service</a></ul>
                     <ul><a href="#ABOUT" className='home-nav-in-ul'>News</a></ul>
                     <ul><a href="#ABOUT" className='home-nav-in-ul'>All pages</a></ul>
