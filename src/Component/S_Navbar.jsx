@@ -6,11 +6,11 @@ function S_Navbar () {
       const { user,isAuthenticated, loginWithRedirect, logout } = useAuth0();
       const navigate = useNavigate();
       const [dropdownOpen, setDropdownOpen] = useState(false);
+      const [userth, setUserth]=useState(" ");
           const [show,setShow]=useState(false);
           const [alldown,setAlldown]=useState(false);
           const [news,setNews]=useState(false);
          const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
-
          const signin = async (e) => {
     e.preventDefault();
     
@@ -35,6 +35,7 @@ function S_Navbar () {
       const text = await response.json();
       alert(text.message); // Read raw text
       alert(text.usert)
+      setUserth(text.usert);
       if(text.message === "User signed in successfully") {
       navigate("/"); 
       }
@@ -86,6 +87,12 @@ function S_Navbar () {
          {
            signin();
          }
+        const login=()=>signin();
+         useEffect(() => {
+          login();
+           }, []);
+
+         
       
          
   return (
@@ -142,6 +149,7 @@ function S_Navbar () {
       }
 
       {isAuthenticated &&(
+        
         <div className='home-nav-in' onMouseLeave={showoption}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 26" fill="none" className='home-nav-svg'>
                         <path d="M0.481567 24.7061L5.3471 0.378467H10.0925L14.958 24.7061H10.8434L9.88226 19.0898H5.64744L4.65632 24.7061H0.481567ZM6.09796 16.2665H9.40172L7.74984 6.05492L6.09796 16.2665Z" fill="black"/>
@@ -181,7 +189,9 @@ function S_Navbar () {
 
                     </div>
                     )} */}
-                    
+                    <div>
+                      {userth}
+                    </div>
                     
                       <div className='profile-img' onClick={toggleDropdown}>
                         <img src={user.picture} alt="sd" />
