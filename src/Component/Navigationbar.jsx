@@ -4,11 +4,13 @@ import man from "../../public/man.png";
 import man1 from "../../public/man1.png";
 
 import user1 from "../../public/user.png";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 function Navigationbar () {
   
     const [dropdownOpen, setDropdownOpen] = useState(false);
+      const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     const [show,setShow]=useState(false);
     const [alldown,setAlldown]=useState(false);
     const [news,setNews]=useState(false);
@@ -98,7 +100,7 @@ function Navigationbar () {
                     <li className='home-nav-in-li'>
                     <ul><a href="/Home" className='home-nav-in-ul1' onMouseOver={closeall}>Home</a></ul>
                     <ul><a className='home-nav-in-ul1' onMouseOver={about} >About Us</a></ul>
-                    <ul><a href="/Service" className='home-nav-in-ul1' onMouseOver={closeall}>Service</a></ul>
+                    <ul><a className='home-nav-in-ul1' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} onMouseOver={closeall}>Service</a></ul>
                     <ul><a className='home-nav-in-ul1' onMouseOver={newsdown} >News</a></ul>
                     <ul><a className='home-nav-in-ul1' onMouseOver={allpages}>All pages</a></ul>
                     </li>
