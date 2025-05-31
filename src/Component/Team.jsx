@@ -5,6 +5,8 @@ import ABG17 from "../../public/A-BG31.png";
 import ABG18 from "../../public/A-BG32.png";
 import ABG19 from "../../public/A-BG33.png";
 import sri from "../assets/sri.jpeg"
+import barath from "../assets/barath.jpg"
+
 import Navigationbar from './Navigationbar';
 import Footer from './Footer';
 
@@ -67,16 +69,16 @@ function Team  () {
                     <div className="e-hole-div">
                       <img src={sri} alt="uyt" className="E-price-img" />
                       <div className="E-price-new-div">
-                        <h5 className="E-price-head">Guy Hawkins</h5>
+                        <h5 className="E-price-head">Sri Sabharish</h5>
                         <h5>CEO</h5>
                       </div>
                     </div>
                   </div>
                   <div className="in-animation4">
                     <div className="e-hole-div">
-                      <img src={ABG17} alt="uyt" className="E-price-img" />
+                      <img src={barath} alt="uyt" className="E-price-img" />
                       <div className="E-price-new-div">
-                        <h5 className="E-price-head">Theresa Webb</h5>
+                        <h5 className="E-price-head">Barathkumaran</h5>
                         <h5>Administrator</h5>
                       </div>
                     </div>
