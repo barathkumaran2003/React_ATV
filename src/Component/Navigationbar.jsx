@@ -120,9 +120,7 @@ function Navigationbar() {
               All pages
             </a>
           </ul>
-          <div>
-            {userDetails.userType}
-          </div>
+          
         </li>
         <div className="search-bar1">
           <a href="">

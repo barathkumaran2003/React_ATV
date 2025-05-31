@@ -49,7 +49,8 @@ function Atvn() {
 
     fetchUserDetails();
     fetchNewsList();
-  }
+  
+}
 }, [isAuthenticated, user]);
 
 
