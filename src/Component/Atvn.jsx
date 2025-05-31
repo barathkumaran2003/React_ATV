@@ -32,27 +32,26 @@ function Atvn() {
 
 
    useEffect(() => {
-      const get=localStorage.getItem("username");
-      const fetchUserDetails = async () => {
-        try {
-          const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user.name}`);
-          const data = await response.json();
-  
-          // Extract only what you need
-          setUserDetails({
-            username: data.username,
-            email: data.email,
-            userType: data.userType,
-          });
-        } catch (error) {
-          console.error('Error fetching user details:', error);
-        }
-      };
-  
-      fetchUserDetails();
-      fetchNewsList();
-  
-    }, []);
+  if (isAuthenticated && user) {
+    const fetchUserDetails = async () => {
+      try {
+        const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user.name}`);
+        const data = await response.json();
+        setUserDetails({
+          username: data.username,
+          email: data.email,
+          userType: data.userType,
+        });
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+      }
+    };
+
+    fetchUserDetails();
+    fetchNewsList();
+  }
+}, [isAuthenticated, user]);
+
 
     const savenews=async()=>{
         const newsdata = {
