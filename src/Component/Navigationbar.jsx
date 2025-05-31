@@ -109,7 +109,7 @@ function Navigationbar () {
                     <i class="fas fa-shopping-cart cart-in" id='cart'></i>
                     
                    {!isAuthenticated &&  (<div className='profile-img' onClick={toggleDropdown}>
-                        <img src={user.picture} alt="sd" style={{borderRadius:'50px'}} />
+                        <img src="" alt="sd" style={{borderRadius:'50px'}} />
                         <h5>{user.name}</h5>
                         <span className="dropdown-icon">{dropdownOpen ? "▲" : "▼"}</span>
 
