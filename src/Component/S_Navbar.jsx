@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Atv.css';
 import { useAuth0 } from '@auth0/auth0-react';
 function S_Navbar () {
-      const { auser,isAuthenticated, loginWithRedirect, logout } = useAuth0();
+      const { user,isAuthenticated, loginWithRedirect, logout } = useAuth0();
       const [dropdownOpen, setDropdownOpen] = useState(false);
           const [show,setShow]=useState(false);
           const [alldown,setAlldown]=useState(false);
@@ -141,8 +141,8 @@ function S_Navbar () {
                     
                     
                       <div className='profile-img' onClick={toggleDropdown}>
-                        <img src={auser.picture} alt="sd" />
-                        <h5>{auser.name}</h5>
+                        <img src={""} alt="sd" />
+                        <h5>{user.name}</h5>
                                                 <span className="dropdown-icon">{dropdownOpen ? "▲" : "▼"}</span>
 
                     </div>
