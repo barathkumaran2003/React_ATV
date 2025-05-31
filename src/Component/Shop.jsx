@@ -53,7 +53,9 @@ function Shop() {
     }
   };
 
+
   useEffect(() => {
+    if (isAuthenticated && user) {
     const get = localStorage.getItem("username");
     const fetchUserDetails = async () => {
       try {
@@ -74,7 +76,8 @@ function Shop() {
 
     fetchUserDetails();
     fetchNewsList();
-  }, []);
+  }
+  }, [isAuthenticated, user]);
   
 
   const addtocart=async(imgurl,product,sprice)=>
