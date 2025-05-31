@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Atv.css';
 import { useAuth0 } from '@auth0/auth0-react';
 function S_Navbar () {
-      const { loginWithRedirect, logout, isAuthenticated, auser } = useAuth0();
+      const { auser,isAuthenticated, loginWithRedirect, logout } = useAuth0();
       const [dropdownOpen, setDropdownOpen] = useState(false);
           const [show,setShow]=useState(false);
           const [alldown,setAlldown]=useState(false);
