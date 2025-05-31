@@ -1,13 +1,52 @@
 import React, { useState } from 'react'
 import './Atv.css';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router-dom';
 function S_Navbar () {
       const { user,isAuthenticated, loginWithRedirect, logout } = useAuth0();
+      const navigate = useNavigate();
       const [dropdownOpen, setDropdownOpen] = useState(false);
           const [show,setShow]=useState(false);
           const [alldown,setAlldown]=useState(false);
           const [news,setNews]=useState(false);
          const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+         const signin = async (e) => {
+    e.preventDefault();
+    
+    const details = {
+      username: user.name,
+        password: user.nickname,
+        email: user.email,
+        phonenumber: user.middle_name || "", // fallback if null
+        usertype: "user",
+    };
+
+    try {
+      console.log("Sending details:");
+      const response = await fetch("https://atv-backend-ie8n.onrender.com/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(details),
+      });
+
+      const text = await response.json();
+      alert(text.message); // Read raw text
+      alert(text.usert)
+      if(text.message === "User signed in successfully") {
+      navigate("/"); 
+      }
+      else{
+        navigate("/Loginpage");
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error.message);
+      alert("Network error or server not reachable.");
+    }
+  };
+        
          const about=()=>
          {
             setShow(true);
@@ -43,8 +82,12 @@ function S_Navbar () {
           setNews(false);
           setAlldown(false);
          } 
+         if(isAuthenticated)
+         {
+           signin();
+         }
       
-
+         
   return (
      <>
     
@@ -141,7 +184,7 @@ function S_Navbar () {
                     
                     
                       <div className='profile-img' onClick={toggleDropdown}>
-                        <img src={""} alt="sd" />
+                        <img src={user.picture} alt="sd" />
                         <h5>{user.name}</h5>
                                                 <span className="dropdown-icon">{dropdownOpen ? "▲" : "▼"}</span>
 
@@ -156,7 +199,7 @@ function S_Navbar () {
                 </button> */}
                 <div>
                     <h5>Profile</h5>
-                    <a href="/" style={{textDecoration:'none',color:'black'}}><h5>Log out</h5></a>
+                    <a style={{textDecoration:'none',color:'black'}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}><h5>Log out</h5></a>
                 
                 </div>
                 
