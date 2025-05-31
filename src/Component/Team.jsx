@@ -4,6 +4,7 @@ import ABG16 from "../../public/A-BG30.png";
 import ABG17 from "../../public/A-BG31.png";
 import ABG18 from "../../public/A-BG32.png";
 import ABG19 from "../../public/A-BG33.png";
+import sri from "../assets/sri.jpeg"
 import Navigationbar from './Navigationbar';
 import Footer from './Footer';
 
@@ -64,7 +65,7 @@ function Team  () {
                 <div className="t-price">
                   <div className="in-animation4">
                     <div className="e-hole-div">
-                      <img src={ABG16} alt="uyt" className="E-price-img" />
+                      <img src={sri} alt="uyt" className="E-price-img" />
                       <div className="E-price-new-div">
                         <h5 className="E-price-head">Guy Hawkins</h5>
                         <h5>CEO</h5>
