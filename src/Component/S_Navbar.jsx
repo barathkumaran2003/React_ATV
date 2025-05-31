@@ -87,11 +87,7 @@ function S_Navbar () {
          {
            signin();
          }
-        const login=()=>signin();
-         useEffect(() => {
-          login();
-           }, []);
-
+         
          
       
          
@@ -138,7 +134,7 @@ function S_Navbar () {
           appState: {
             returnTo: '/Home'  // 👈 Redirect here after login
           }
-        })}><samp>Log/Sign
+        })}><samp onClick={signin}>Log/Sign
                         </samp></h5></a>
                         
                     </div>
