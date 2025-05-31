@@ -29,7 +29,6 @@ function S_Navbar() {
 
       const text = await response.json();
       alert(text.message);
-      setUserth(text.usert);
       if (text.message === "User signed in successfully") {
         navigate("/Home");
       } else {
@@ -70,7 +69,7 @@ function S_Navbar() {
           <li className="home-nav-in-li">
             <ul><a href="#ABOUT" className="home-nav-in-ul">Demo</a></ul>
             <ul><a href="#ABOUT" className="home-nav-in-ul">About Us</a></ul>
-            <ul><a href="#ABOUT" className="home-nav-in-ul">Service</a></ul>
+            <ul><a onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} className="home-nav-in-ul">Service</a></ul>
             <ul><a href="#ABOUT" className="home-nav-in-ul">News</a></ul>
             <ul><a href="#ABOUT" className="home-nav-in-ul">All pages</a></ul>
           </li>
