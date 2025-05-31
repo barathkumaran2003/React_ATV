@@ -11,8 +11,11 @@ import Footer from "./Footer";
 import Pen from "../../public/compose.png"
 import trash from "../../public/delete.png"
 import plus from "../../public/plus.png";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Shop() {
+        const {user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [editformOpen, setEditFormOpen] = useState(false);
   const [cartformOpen, setCartFormOpen] = useState(false);
@@ -21,8 +24,6 @@ function Shop() {
   const addnews = () => setDropdownOpen(!dropdownOpen);
   const canceledit = () => setEditFormOpen(!editformOpen);
   const [addondata, setAddondata] = useState([]);
-  const [user, setUser] = useState("");
-  const [userType, setUserType] = useState("");
   const [userDetails, setUserDetails] = useState({
     username: "",
     email: "",
@@ -53,14 +54,11 @@ function Shop() {
   };
 
   useEffect(() => {
-    setUser(localStorage.getItem("username"));
     const get = localStorage.getItem("username");
-    console.log("Title from Singup:", user);
     const fetchUserDetails = async () => {
       try {
-        console.log("linkurl", user);
         const response = await fetch(
-          `https://atv-backend-ie8n.onrender.com/login?username=${get}`
+          `https://atv-backend-ie8n.onrender.com/login?username=${user.name}`
         );
         const data = await response.json();
 
@@ -104,7 +102,6 @@ function Shop() {
      async(product) =>
     
     {
-    setUserType(product);
     console.log("Editing product:", product);
     try{
       const editingdata= await fetch(`https://atv-backend-ie8n.onrender.com/shopedit?product=${product}`);
@@ -168,7 +165,7 @@ function Shop() {
       sprice: document.getElementById("changedsprice").value,
     };
     try {
-      const response = await fetch(`https://atv-backend-ie8n.onrender.com/shopedit?product=${userType}`, {
+      const response = await fetch(`https://atv-backend-ie8n.onrender.com/shopedit?product=${product}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

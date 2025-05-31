@@ -6,9 +6,11 @@ import Navigationbar from "./Navigationbar";
 
 import "./News.css";
 import Footer from "./Footer";
+import { useAuth0 } from "@auth0/auth0-react";
 function Atvn() { 
+
+        const {user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
       const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [user, setUser] = useState('');
     const [addondata2, setAddondata2]=useState([]);
 
      const [userDetails, setUserDetails] = useState({username: '',email: '',userType:''});
@@ -30,13 +32,10 @@ function Atvn() {
 
 
    useEffect(() => {
-      setUser(localStorage.getItem("username"));
       const get=localStorage.getItem("username");
-      console.log("Title from Singup:",user);
       const fetchUserDetails = async () => {
         try {
-          console.log("linkurl",user);
-          const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${get}`);
+          const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user.name}`);
           const data = await response.json();
   
           // Extract only what you need

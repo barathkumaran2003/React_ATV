@@ -10,11 +10,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 function Navigationbar () {
   
     const [dropdownOpen, setDropdownOpen] = useState(false);
-      const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+      const {user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
     const [show,setShow]=useState(false);
     const [alldown,setAlldown]=useState(false);
     const [news,setNews]=useState(false);
-   const [user, setUser] = useState('');
    const [userDetails, setUserDetails] = useState({username:'',userType:''});
    const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
    const about=()=>
@@ -54,13 +53,10 @@ function Navigationbar () {
    } 
 
    useEffect(() => {
-      setUser(localStorage.getItem("username"));
       const get=localStorage.getItem("username");
-      console.log("Title from Singup:",user);
       const fetchUserDetails = async () => {
         try {
-          console.log("linkurl",user);
-          const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${get}`);
+          const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user.name}`);
           const data = await response.json();
   
           // Extract only what you need
@@ -100,7 +96,7 @@ function Navigationbar () {
                     <li className='home-nav-in-li'>
                     <ul><a href="/Home" className='home-nav-in-ul1' onMouseOver={closeall}>Home</a></ul>
                     <ul><a className='home-nav-in-ul1' onMouseOver={about} >About Us</a></ul>
-                    <ul><a className='home-nav-in-ul1' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} onMouseOver={closeall}>Service</a></ul>
+                    <ul><a href="/Service" className='home-nav-in-ul1' onMouseOver={closeall}>Service</a></ul>
                     <ul><a className='home-nav-in-ul1' onMouseOver={newsdown} >News</a></ul>
                     <ul><a className='home-nav-in-ul1' onMouseOver={allpages}>All pages</a></ul>
                     </li>
@@ -111,23 +107,23 @@ function Navigationbar () {
                     </div>
         
                     <i class="fas fa-shopping-cart cart-in" id='cart'></i>
-                    {userDetails.userType=="user" && (
+                    
                       <div className='profile-img' onClick={toggleDropdown}>
-                        <img src={user1} alt="sd" />
-                        <h5>{userDetails.username}</h5>
+                        <img src={user.picture} alt="sd" style={{borderRadius:'50px'}} />
+                        <h5>{user.name}</h5>
                         <span className="dropdown-icon">{dropdownOpen ? "▲" : "▼"}</span>
 
                     </div>
-                    )}
+                  
                     
-                    {userDetails.userType=="admin" && (
+                    {/* {userDetails.userType=="admin" && (
                       <div className='profile-img' onClick={toggleDropdown}>
-                        <img src={man1} alt="sd" />
+                        <img src={} alt="sd" />
                         <h5>{userDetails.username}</h5>
                                                 <span className="dropdown-icon">{dropdownOpen ? "▲" : "▼"}</span>
 
                     </div>
-                    )}
+                    )} */}
                     {dropdownOpen &&  (
               <div className="dropdown">
                 {/* <Link to="" className="dropdown-item">
@@ -138,7 +134,7 @@ function Navigationbar () {
                 </button> */}
                 <div>
                     <h5>Profile</h5>
-                    <a href="/" style={{textDecoration:'none',color:'black'}}><h5>Log out</h5></a>
+                    <a onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} style={{textDecoration:'none',color:'black'}}><h5>Log out</h5></a>
                 
                 </div>
                 

@@ -24,23 +24,21 @@ import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
-   const [user, setUser] = useState('');
+      const {user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
    const [userDetails, setUserDetails] = useState({username: '',email: '',userType:''});
      const [visible, setVisible] = useState(false);
 
  useEffect(() => {
     setVisible(true);
-    setUser(localStorage.getItem("username"));
     const get=localStorage.getItem("username");
-    console.log("Title from Singup:",user);
     const fetchUserDetails = async () => {
       try {
-        console.log("linkurl",user);
-        const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${get}`);
+        const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user.name}`);
         const data = await response.json();
 
         // Extract only what you need
@@ -117,7 +115,7 @@ function ATVhome() {
             <i class="fas fa-location-dot" id="contact-location"></i>
             <p className="contact-add"> 14 MWC, Chengalpattu, Chennai</p>
             <div className="a-form">
-              <form action="" className="a-form1">
+              <form action="/Contact" className="a-form1">
                 <input
                   type="email"
                   name="email"
