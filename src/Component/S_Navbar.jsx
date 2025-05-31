@@ -41,7 +41,11 @@ function S_Navbar () {
                     <i class="fas fa-shopping-cart cart-in" id='cart'></i>
                     {!isAuthenticated && (
                       <div className='home-nav-contact'>
-                      <a href="/Loginpage"><h5 className='home-nav-contact-h1' onClick={() => loginWithRedirect()}><samp>Log/Sign
+                      <a><h5 className='home-nav-contact-h1' onClick={() => loginWithRedirect({
+          appState: {
+            returnTo: '/Home'  // 👈 Redirect here after login
+          }
+        })}><samp>Log/Sign
                         </samp></h5></a>
                         
                     </div>
