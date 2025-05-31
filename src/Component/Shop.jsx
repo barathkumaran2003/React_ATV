@@ -65,7 +65,6 @@ function Shop() {
         // Extract only what you need
         setUserDetails({
           username: data.username,
-          email: data.email,
           userType: data.userType,
         });
       } catch (error) {

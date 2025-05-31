@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 
 // 👇 Callback to redirect user to /Home after login
 const onRedirectCallback = (appState) => {
-  window.history.replaceState({}, document.title, appState?.returnTo || '/Home');
+  window.history.replaceState({}, document.title, appState?.returnTo || '/Home','/Shop');
 };
 
 createRoot(document.getElementById('root')).render(
