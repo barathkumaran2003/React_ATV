@@ -54,26 +54,28 @@ function Shop() {
   };
 
   useEffect(() => {
-  if (isAuthenticated && user) {
+    const get = localStorage.getItem("username");
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`https://atv-backend-ie8n.onrender.com/login?username=${user.name}`);
+        const response = await fetch(
+          `https://atv-backend-ie8n.onrender.com/login?username=${user.name}`
+        );
         const data = await response.json();
+
+        // Extract only what you need
         setUserDetails({
           username: data.username,
-          email: data.email,
           userType: data.userType,
         });
       } catch (error) {
-        console.error('Error fetching user details:', error);
+        console.error("Error fetching user details:", error);
       }
     };
 
     fetchUserDetails();
     fetchNewsList();
-  }
-}, [isAuthenticated, user]);
-
+  }, []);
+  
 
   const addtocart=async(imgurl,product,sprice)=>
     
