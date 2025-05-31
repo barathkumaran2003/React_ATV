@@ -21,7 +21,7 @@ function S_Navbar() {
       password: user.nickname,
       email: user.email,
       phonenumber: user.middle_name || "",
-      usertype: "user",
+      userType: "user",
     };
 
     try {
