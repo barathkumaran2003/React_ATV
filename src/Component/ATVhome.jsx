@@ -25,6 +25,7 @@ import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
 
+
 console.log("Title from Singup:", title); // Log the title value
 function ATVhome() {
    const [user, setUser] = useState('');

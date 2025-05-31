@@ -7,6 +7,7 @@ import user1 from "../../public/user.png";
 
 
 function Navigationbar () {
+  
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [show,setShow]=useState(false);
     const [alldown,setAlldown]=useState(false);

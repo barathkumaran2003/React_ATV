@@ -317,7 +317,7 @@ function Loginpage() {
             <i>Username</i>
           </div>
           <div className="inputBox">
-            <input type="text" placeholder=" " required id='password' />
+            <input type="password" placeholder=" " required id='password' />
             <i>Password</i>
           </div>
           <div className="inputBox">

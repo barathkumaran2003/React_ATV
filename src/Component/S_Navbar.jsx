@@ -1,6 +1,9 @@
 import React from 'react'
 import './Atv.css';
+import { useAuth0 } from '@auth0/auth0-react';
 function S_Navbar () {
+      const { loginWithRedirect, logout, isAuthenticated, auser } = useAuth0();
+
   return (
      <>
     
@@ -36,11 +39,15 @@ function S_Navbar () {
                     </div>
         
                     <i class="fas fa-shopping-cart cart-in" id='cart'></i>
-                    <div className='home-nav-contact'>
-                      <a href="/Loginpage"><h5 className='home-nav-contact-h1'><samp>Log/Sign
+                    {!isAuthenticated && (
+                      <div className='home-nav-contact'>
+                      <a href="/Loginpage"><h5 className='home-nav-contact-h1' onClick={() => loginWithRedirect()}><samp>Log/Sign
                         </samp></h5></a>
                         
                     </div>
+
+                    )}
+                    
               </div>
              </div>
      </>
