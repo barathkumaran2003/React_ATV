@@ -25,9 +25,53 @@ import Footer from "./Footer";
 import { title } from './Singup';
 import Navigationbar from "./Navigationbar";
 import { useAuth0 } from '@auth0/auth0-react';
+import { p } from 'framer-motion/client';
+import { motion } from "framer-motion";
 
 
-console.log("Title from Singup:", title); // Log the title value
+console.log("Title from Singup:", title);
+ // Log the title value
+
+ const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+    viewport: { once: false },
+
+};
+const fadeDown = {
+  initial: { opacity: 0, y: -50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+    viewport: { once: false },
+
+};
+
+const fadeLeft = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
+const fadeRight = {
+  initial: { opacity: 0, x: 50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
+const popIn = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
+
 function ATVhome() {
       const {user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
    const [userDetails, setUserDetails] = useState({username: '',email: '',userType:''});
@@ -85,7 +129,10 @@ function ATVhome() {
                       
 
           <div className="in-animation41">
-            <div className='in-animation41'>
+            <motion.div
+            {...popIn}
+            >
+              <div className='in-animation41'>
               <div className="home-hero-h1">
               <h1 className="home-hero-head">Passionate about motorcycles </h1>
               
@@ -100,15 +147,22 @@ function ATVhome() {
               
             </div>
             </div>
-            <div className="in-animation41" id="f-button">
+            </motion.div>
+            <motion.div
+            {...fadeUp}
+            >
+              <div className="in-animation41" id="f-button">
               <a href="/Exploremore" className="f-a">
                 EXPLORE MORE
               </a>
             </div>
+            </motion.div>
           </div>
         </div>
         <div className="bg2"></div>
-        <div className="in-animation7" id="contact">
+        <motion.div 
+        {...popIn}>
+          <div className="in-animation7" id="contact">
           <div className="contact-div">
             <i class="fas fa-phone-volume" id="contact-phone"></i>
             <p className="contact-number"> (+91) 94429-51070</p>``
@@ -131,12 +185,20 @@ function ATVhome() {
             </div>
           </div>
         </div>
+        </motion.div>
         <div className="home-head2">
           <div className="home-head-div">
-            <div className="in-animation4">
+            <motion.div
+            {...fadeLeft}
+            >
+              <div className="in-animation4">
               <img src={ABG2} alt="av" className="home-head-div-img" />
             </div>
-            <div className="home-head-div-para">
+            </motion.div>
+            <motion.div
+            {...fadeRight}
+            >
+              <div className="home-head-div-para">
               <div className="home-head-div-sub">
                 <h1 className="in-animation4">We Live And Breathe Motocross</h1>
                 <h6 className="in-animation4" id="home-hero-div-h6">
@@ -152,10 +214,13 @@ function ATVhome() {
                 </div>
               </div>
             </div>
+            </motion.div>
           </div>
           <div className="in-animation8" id="main-box">
             <div style={{ display: "flex" }}>
-              <div className="box-1">
+              <motion.div
+              {...fadeUp}>
+                <div className="box-1">
                 <h3 className="in-animation4" id="box-1-head">
                   Join us at ATM & Motorcycle
                 </h3>
@@ -171,21 +236,30 @@ function ATVhome() {
                   </a>
                 </div>
               </div>
+              </motion.div>
               <div className="box-2">
                 <img src={ABG3} alt="ff" className="box-2-img" />
-                <div class="in-animation4" id="box-2-div">
+                <motion.div 
+                {...fadeUp}>
+                  <div class="in-animation4" id="box-2-div">
                   Adrenaline-Fueled Sports
                 </div>
+                </motion.div>
               </div>
             </div>
             <div style={{ display: "flex" }}>
               <div className="box-3">
                 <img src={ABG4} alt="ff" className="box-3-img" />
-                <div className="in-animation4" id="box-3-div">
+                <motion.div
+                {...fadeUp}>
+                  <div className="in-animation4" id="box-3-div">
                   Dive Into The World
                 </div>
+                </motion.div>
               </div>
-              <div className="box-4">
+              <motion.div 
+              {...fadeUp}>
+                <div className="box-4">
                 <h3 className="in-animation4" id="box-4-head">
                   Strap on your helmet, rev your engine
                 </h3>
@@ -201,13 +275,16 @@ function ATVhome() {
                   </a>
                 </div>
               </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
       <div>
         <div>
-          <div
+          <motion.div 
+          {...popIn}>
+            <div
             className="in-animation4"
             id="para"
             style={{ marginTop: "1100px" }}
@@ -237,20 +314,29 @@ function ATVhome() {
               Covered For You.
             </h1>
           </div>
-          <div className="in-animation4" id="q-button">
+          </motion.div>
+          <motion.div 
+          {...fadeUp}>
+            <div className="in-animation4" id="q-button">
             <a href="/Contact" className="e-a">
               EXPLORE MORE
             </a>
           </div>
+          </motion.div>
         </div>
       </div>
       <div className="frame">
-        <div style={{ display: "flex" }} className="in-animation4">
+        <motion.div
+        {...fadeLeft}>
+          <div style={{ display: "flex" }} className="in-animation4">
           <img src={ABG8} alt="" className="frame-1" />
           <img src={ABG9} alt="" className="frame-2-3" />
           <img src={ABG10} alt="" className="frame-2-3" />
         </div>
-        <div
+        </motion.div>
+        <motion.div
+        {...fadeRight}>
+          <div
           style={{ display: "flex", marginTop: "20px" }}
           className="in-animation4"
         >
@@ -258,6 +344,7 @@ function ATVhome() {
           <img src={ABG12} alt="" className="frame-5" />
           <img src={ABG13} alt="" className="frame-6" />
         </div>
+        </motion.div>
       </div>
       <div className="marquee">
         <h1>
@@ -348,7 +435,10 @@ function ATVhome() {
               alignItems: "center",
             }}
           >
-            <div
+            <motion.div
+            
+            {...fadeLeft}>
+              <div
               style={{
                 paddingTop: "15px",
                 paddingLeft: "170px",
@@ -365,11 +455,15 @@ function ATVhome() {
                 you covered.
               </p>
             </div>
-            <div className="in-animation4" id="t-button">
+            </motion.div>
+            <motion.div
+            {...fadeRight}>
+              <div className="in-animation4" id="t-button">
               <a href="/Contact" className="t-a">
                 Get started{" "}
               </a>
             </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -377,7 +471,10 @@ function ATVhome() {
         <div className="home-fit-div">
           <div className="home-fit-div1">
             <div className="in-animation5" id="home-fit-div2">
-              <div className="home-fit-main">
+              <motion.div
+              
+              {...fadeLeft}>
+                <div className="home-fit-main">
                 <h1>Be Part Of A Thriving Community</h1>
                 <h6>
                   Join us at ATM & Motorcycle and be part of a thriving
@@ -391,13 +488,19 @@ function ATVhome() {
                   </a>
                 </div>
               </div>
+              </motion.div>
             </div>
-            <div className="in-animation6">
+            <motion.div 
+            {...popIn}>
+              <div className="in-animation6">
               <img src={ABG15} alt="av" className="home-fit-img" />
             </div>
+            </motion.div>
           </div>
 
-          <div
+          <motion.div
+          {...fadeUp}>
+            <div
             class="in-animation4"
             id="home-fit-next-divs"
             style={{ display: "flex" }}
@@ -417,24 +520,38 @@ function ATVhome() {
               </div>
             </div>
           </div>
+          </motion.div>
         </div>
         <div className="price">
-          <div className="in-animation4">
+          <motion.div
+          {...fadeLeft}>
+            <div className="in-animation4">
             <img src={ABG16} alt="uyt" className="price-img" />
             <h5 className="price-head">Moto Helmet Glossy Black</h5>
             <h5 style={{ color: "white" }}>$ 91.62 USD</h5>
           </div>
-          <div className="in-animation4">
+          </motion.div>
+          <motion.div
+          {...fadeUp}>
+            <div className="in-animation4">
             <img src={ABG17} alt="uyt" className="price-img" />
             <h5 className="price-head">Black Full Protection Set</h5>
             <h5 style={{ color: "white" }}>$ 67.23 USD</h5>
           </div>
-          <div className="in-animation4">
+          </motion.div>
+          <motion.div
+          {...fadeDown}>
+              <div className="in-animation4">
             <img src={ABG18} alt="uyt" className="price-img" />
             <h5 className="price-head">Moto Helmet And Glasses</h5>
             <h5 style={{ color: "white" }}>$ 8.52 USD</h5>
           </div>
-          <div className="in-animation4">
+          </motion.div>
+          
+          
+          <motion.div
+          {...fadeRight}>
+            <div className="in-animation4">
             <img src={ABG19} alt="uyt" className="price-img" />
             <h5 className="price-head">Helmet And Glasses Orange</h5>
             <div style={{ display: "flex" }}>
@@ -442,11 +559,14 @@ function ATVhome() {
               <h5 className="price-head2">$ 7,721.71 USD</h5>
             </div>
           </div>
+          </motion.div>
         </div>
       </div>
       <div className="home-location">
         <img src={ABG20} alt="jh" className="home-location-img" />
-        <div style={{ paddingTop: "140px" }} className="in-animation4">
+        <motion.div
+        {...popIn}>
+          <div style={{ paddingTop: "140px" }} className="in-animation4">
           <div className="home-location-div"></div>
           <img src={ABG21} alt="ASD" className="home-location-img2" />
           <div className="home-location-content">
@@ -482,6 +602,7 @@ function ATVhome() {
             <i class="fas fa-location-dot" id="home-location-icon-main"></i>
           </div>
         </div>
+        </motion.div>
       </div>
       <Footer />
     </>

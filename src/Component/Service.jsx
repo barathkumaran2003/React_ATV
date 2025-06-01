@@ -12,6 +12,41 @@ import ABG4 from "../../public/A-BG4.png";
 import ABG9 from "../../public/A-BG9.png";
 import ABG3 from "../../public/A-BG3.png";
 import Footer from "./Footer";
+import { motion } from "framer-motion";
+
+
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+    viewport: { once: false },
+
+};
+
+const fadeLeft = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
+const fadeRight = {
+  initial: { opacity: 0, x: 50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
+const popIn = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
 
 function Service() {
   return (
@@ -24,7 +59,11 @@ function Service() {
             Get ready to hit the track and embrace the adrenaline-fueled sport!
           </p>
         </div>
-        <div className="service-img">
+        <motion.div
+  {...fadeLeft}
+  viewport={{ once: false }}
+>
+  <div className="service-img">
           <div style={{ marginRight: "15px" }}>
             <img src={ABG5} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
@@ -56,7 +95,12 @@ function Service() {
             </div>
           </div>
         </div>
-        <div className="service-img">
+  {/* content here */}
+</motion.div>
+        <motion.div
+ {...fadeRight}
+>
+  <div className="service-img">
           <div style={{ marginRight: "15px" }}>
             <img src={ABG34} alt="GHJ" className="service-list-2-item-image" />
             <div className="service-img-head">
@@ -88,7 +132,13 @@ function Service() {
             </div>
           </div>
         </div>
-        <div className="s-home-fit-div1">
+  {/* content here */}
+</motion.div>
+
+
+        <motion.div
+ {...popIn}>
+  <div className="s-home-fit-div1">
           <div className="in-animation5" id="s-home-fit-div2">
             <div className="s-home-fit-main">
               <h1>Be Part Of A Thriving Community</h1>
@@ -107,7 +157,12 @@ function Service() {
             <img src={ABG15} alt="av" className="s-home-fit-img" />
           </div>
         </div>
-        <div className="last-img">
+ </motion.div>
+
+
+  <motion.div
+ {...fadeUp}>
+   <div className="last-img">
           <div className="last-img-div">
             <img src={ABG3} alt="av" className="last-img-img" />
           </div>
@@ -128,6 +183,8 @@ function Service() {
             </div>
           </div>
         </div>
+ </motion.div>
+          
         <Footer />
       </div>
     </>

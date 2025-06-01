@@ -5,6 +5,7 @@ import man1 from "../../public/man1.png";
 
 import user1 from "../../public/user.png";
 import { useAuth0 } from "@auth0/auth0-react";
+import { motion } from "framer-motion";
 
 function Navigationbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -16,6 +17,14 @@ function Navigationbar() {
     username: "",
     userType: "",
   });
+  const popIn = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { duration: 0.8 },
+      viewport: { once: false },
+
+};
+
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
   const about = () => {
     setShow(true);
@@ -71,7 +80,10 @@ function Navigationbar() {
 
   
   return (
-    <div className="in-animation7" onMouseLeave={showoption}>
+    <motion.div
+    {...popIn}
+    >
+      <div className="in-animation7" onMouseLeave={showoption}>
       <div className="home-nav-in">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 26" fill="none" className='home-nav-svg'>
                         <path d="M0.481567 24.7061L5.3471 0.378467H10.0925L14.958 24.7061H10.8434L9.88226 19.0898H5.64744L4.65632 24.7061H0.481567ZM6.09796 16.2665H9.40172L7.74984 6.05492L6.09796 16.2665Z" fill="black"/>
@@ -364,6 +376,7 @@ function Navigationbar() {
         )}
       </div>
     </div>
+    </motion.div>
   );
 }
 export default Navigationbar;

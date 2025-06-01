@@ -44,7 +44,12 @@ function Signinpage() {
               </p>
             </div>
             <div className="in-animation4" id="f-button">
-              <a href="/Loginpage" className="f-a">
+              <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="f-a">
                 EXPLORE MORE
               </a>
             </div>
@@ -58,7 +63,12 @@ function Signinpage() {
             <i class="fas fa-location-dot" id="contact-location"></i>
             <p className="contact-add"> 14 MWC, Chengalpattu, Chennai</p>
             <div className="a-form">
-              <form action="" className="a-form1">
+              <form className="a-form1" onSubmit={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}}>
                 <input
                   type="email"
                   name="email"
@@ -89,7 +99,12 @@ function Signinpage() {
                   information, keeping you in the loop.
                 </h6>
                 <div className="in-animation4" id="e-button">
-                  <a href="/Loginpage" className="e-a">
+                  <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="e-a">
                     EXPLORE MORE
                   </a>
                 </div>
@@ -109,7 +124,12 @@ function Signinpage() {
                   fit for your needs.
                 </p>
                 <div className="in-animation4" id="e-button">
-                  <a href="/Loginpage" className="e-a">
+                  <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="e-a">
                     EXPLORE MORE
                   </a>
                 </div>
@@ -139,7 +159,12 @@ function Signinpage() {
                   passion that drives the motocross community.
                 </p>
                 <div className="in-animation4" id="e-button">
-                  <a href="/Loginpage" className="e-a">
+                  <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="e-a">
                     EXPLORE MORE
                   </a>
                 </div>
@@ -181,7 +206,12 @@ function Signinpage() {
             </h1>
           </div>
           <div className="in-animation4" id="q-button">
-            <a href="/Loginpage" className="e-a">
+            <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="e-a">
               EXPLORE MORE
             </a>
           </div>
@@ -309,7 +339,12 @@ function Signinpage() {
               </p>
             </div>
             <div className="in-animation4" id="t-button">
-              <a href="/Loginpage" className="t-a">
+              <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="t-a">
                 Get started{" "}
               </a>
             </div>
@@ -329,7 +364,12 @@ function Signinpage() {
                   or connection, we've got it all covered.{" "}
                 </h6>
                 <div className="in-animation4" id="g-button">
-                  <a href="/Loginpage" className="g-a">
+                  <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="g-a">
                     Get started{" "}
                   </a>
                 </div>
@@ -354,7 +394,12 @@ function Signinpage() {
             </div>
             <div class="up" style={{ marginLeft: "250px" }}>
               <div className="in-animation4" id="g-button">
-                <a href="/Loginpage" className="g-a">
+                <a onClick={() =>
+                  loginWithRedirect({
+                    appState: { returnTo: "/Home" },
+                  })
+                }
+                style={{cursor:'pointer'}} className="g-a">
                   Get started{" "}
                 </a>
               </div>
