@@ -32,7 +32,7 @@ function S_Navbar() {
     
 
     try {
-      const response = fetch(
+      const response = await fetch(
         "https://atv-backend-ie8n.onrender.com/signin",
         {
           method: "POST",
