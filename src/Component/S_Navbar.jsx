@@ -7,11 +7,6 @@ import { motion } from "framer-motion";
 
 
 function S_Navbar() {
-  useEffect(() => {
-    if (isAuthenticated) {
-      signin();
-    }
-  }, [isAuthenticated]);
    const popIn = {
   initial: { opacity: 0, scale: 0.8 },
   whileInView: { opacity: 1, scale: 1 },
@@ -56,7 +51,11 @@ function S_Navbar() {
     }
   };
 
-  
+  useEffect(() => {
+    if (isAuthenticated) {
+      signin();
+    }
+  }, [isAuthenticated]);
 
   return (
     <motion.div
