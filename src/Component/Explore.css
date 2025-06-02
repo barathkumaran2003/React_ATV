@@ -376,10 +376,10 @@
   width: 150px; height: 45px; border-radius: 50px; text-align: center; margin-left: 1160px; margin-top: 200px; background-color: aquamarine;
 }
 #experience-button h5{
-  padding: 10px 15px; font-size: medium; font-family: Oswald, sans-serif; letter-spacing: 1px;
+  padding: 10px 15px; font-size: medium; font-family: Oswald, sans-serif; letter-spacing: 1px; 
 }
 .experience-head{
-  color: white; font-family: Oswald, sans-serif; font-weight: bolder; font-size: 50px; letter-spacing: 2px;
+  color: white; font-family: Oswald, sans-serif; font-weight: bolder; font-size: 50px; letter-spacing: 2px; position: relative; margin-top: 170px;
 }
 .home-fit
 {
@@ -582,4 +582,41 @@ height: 260px;
   /* position: absolute; */
   margin-right: 270px;
  
+}
+
+.t-a{
+    background-color: #68e5b2;
+    color: #1e2837;
+    text-align: center;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 14px 24px;
+    font-family: Oswald, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .3s;
+    line-height: inherit;
+    text-decoration: none;cursor: pointer;
+}
+.t-a:hover{
+  background-color: #1e2837;
+    color: #68e5b2;
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    border: 1px solid #68e5b2;
+}
+#t-button{
+      text-align: center;
+    flex-flow: wrap;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 240px;
+    position: relative;
+
 }

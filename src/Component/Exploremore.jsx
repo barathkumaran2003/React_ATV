@@ -16,73 +16,112 @@ import ABG8 from "../../public/A-BG8.png";
 import ABG3 from "../../public/A-BG3.png";
 import ABG34 from "../../public/A-BG34.png";
 import Footer from "./Footer";
+import { motion } from "framer-motion";
+import { p } from "framer-motion/client";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+const fadeDown = {
+  initial: { opacity: 0, y: -50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+const fadeLeft = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+const fadeRight = {
+  initial: { opacity: 0, x: 50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+const popIn = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
 
 function Exploremore() {
+  const CountUp = ({ end, duration }) => {
+    const [count, setCount] = useState(0);
+    const ref = useRef();
+    const started = useRef(false);
 
-const CountUp = ({ end, duration }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef();
-  const started = useRef(false);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting && !started.current) {
+            started.current = true;
+            let start = 0;
+            const increment = end / (duration / 16);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          let start = 0;
-          const increment = end / (duration / 16);
+            const animate = () => {
+              start += increment;
+              if (start < end) {
+                setCount(Math.floor(start));
+                requestAnimationFrame(animate);
+              } else {
+                setCount(end);
+              }
+            };
+            animate();
+          }
+        },
+        { threshold: 0.5 }
+      );
 
-          const animate = () => {
-            start += increment;
-            if (start < end) {
-              setCount(Math.floor(start));
-              requestAnimationFrame(animate);
-            } else {
-              setCount(end);
-            }
-          };
-          animate();
-        }
-      },
-      { threshold: 0.5 }
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, [end, duration]);
+
+    return (
+      <h1 className="e-count-head" ref={ref}>
+        +{count.toLocaleString()}
+      </h1>
     );
+  };
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [end, duration]);
+  const CountUpSection = () => {
+    const data = [
+      {
+        value: 100000,
+        text: "Providing valuable and engaging content for fellow motocross enthusiasts.",
+      },
+      {
+        value: 65000,
+        text: "Providing valuable and engaging content for fellow motocross enthusiasts.",
+      },
+      {
+        value: 2000,
+        text: "Providing valuable and engaging content for fellow motocross enthusiasts.",
+      },
+    ];
 
-  return <h1 className="e-count-head" ref={ref}>+{count.toLocaleString()}</h1>;
-};
-
-const CountUpSection = () => {
-  const data = [
-    {
-      value: 100000,
-      text: "Providing valuable and engaging content for fellow motocross enthusiasts.",
-    },
-    {
-      value: 65000,
-      text: "Providing valuable and engaging content for fellow motocross enthusiasts.",
-    },
-    {
-      value: 2000,
-      text: "Providing valuable and engaging content for fellow motocross enthusiasts.",
-    },
-  ];
-
-  return (
-    <div className="e-counts">
-      {data.map((item, index) => (
-        <div key={index} className="e-count-container">
-          <div className="e-count">
-            <CountUp end={item.value} duration={2000} />
-            <p className="e-count-para">{item.text}</p>
+    return (
+      <div className="e-counts">
+        {data.map((item, index) => (
+          <div key={index} className="e-count-container">
+            <div className="e-count">
+              <CountUp end={item.value} duration={2000} />
+              <p className="e-count-para">{item.text}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  );
-};
+        ))}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -91,41 +130,66 @@ const CountUpSection = () => {
         <div className="home-nav">
           <Navigationbar />
           <div class="in-animation41">
-            <div className="home-hero-h1">
-              <h1 className="home-hero-head">About Us</h1>
-            </div>
-            <div className="home-hero-h1-sub">
-              <p className="home-hero-para">
-                Join us at ATM & Motorcycle and be part of a thriving community
-                that celebrates the adrenaline-fueled sport of motocross
-              </p>
-            </div>
-            <div className="up">
-              <div className="in-animation41" id="home-hero-head-up">
-                <a href="/Exploremore">
-                  <h5>EXPLORE MORE</h5>
-                </a>
+            <motion.div {...popIn}>
+              <div className="home-hero-h1">
+                <h1 className="home-hero-head">About Us</h1>
               </div>
-            </div>
+              <div className="home-hero-h1-sub">
+                <p className="home-hero-para">
+                  Join us at ATM & Motorcycle and be part of a thriving
+                  community that celebrates the adrenaline-fueled sport of
+                  motocross
+                </p>
+              </div>
+            </motion.div>
+            <motion.div {...fadeUp}>
+              <div className="up">
+                <div className="in-animation41" id="home-hero-head-up">
+                  <a href="/Exploremore">
+                    <h5>EXPLORE MORE</h5>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
         <div className="e-bg2"></div>
-        <div style={{ position: "absolute", marginTop: "70px" }} class="e-up">
-          <div className="in-animation4" id="home-fit-button">
-            <h5 className="home-fit-button-head">
-              {" "}
-              <samp>GET STARTED</samp>
-            </h5>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+         <motion.div
+         
+         {...fadeLeft}>
+           <div
+            style={{
+              paddingTop: "15px",
+              paddingLeft: "10px",
+              width: "950px",
+            }}
+            className="in-animation4"
+          >
+            <h1 className="experience-head">
+              Share Experiences, And Stay <br />
+              Connected
+            </h1>
+            <p style={{ color: "white", position: "relative" }}>
+              Whether you're a seasoned rider or just starting out, we've got
+              you covered.
+            </p>
           </div>
+         </motion.div>
+          <motion.div
+          
+          {...fadeRight}>
+            <div className="in-animation4" id="t-button">
+            <a href="/Contact" className="t-a">
+              Get started{" "}
+            </a>
+          </div>
+          </motion.div>
         </div>
-        <div class="in-animation41" id="e-home-fit-next-div">
-          <h1>We live and breathe motocross</h1>
-          <p>
-            What sets us apart is our deep understanding of the motocross
-            community.
-          </p>
-        </div>
-        <div
+        <motion.div
+        
+        {...popIn}>
+          <div
           style={{
             width: "100%",
             display: "flex",
@@ -138,12 +202,20 @@ const CountUpSection = () => {
         >
           <img src={ABG20} alt="lg" className="e-image" />
         </div>
-        <div className="e-counts">
-          <CountUpSection/>
+        </motion.div>
+        <motion.div 
+        
+        {...fadeUp}>
+          <div className="e-counts">
+          <CountUpSection />
         </div>
+        </motion.div>
         <div>
           <div>
-            <div className="in-animation4" id="e-para">
+            <motion.div 
+            
+            {...popIn}>
+              <div className="in-animation4" id="e-para">
               <h1 className="para-head">
                 Be Part Of{" "}
                 <img
@@ -169,14 +241,19 @@ const CountUpSection = () => {
                 Covered For You.
               </h1>
             </div>
-            <div className="up">
+            </motion.div>
+            <motion.div
+            {...fadeUp}>
+              <div className="up">
               <div className="in-animation4" id="para-button">
                 <h5 className="para-button-head">EXPLORE MORE</h5>
               </div>
             </div>
+            </motion.div>
           </div>
         </div>
-        <div style={{ position: "absolute" }} class="e-up">
+        <motion.div  {...fadeRight}>
+          <div style={{ position: "absolute" }} class="e-up">
           <div className="in-animation4" id="e-home-fit-button">
             <h5 className="home-fit-button-head">
               {" "}
@@ -184,15 +261,20 @@ const CountUpSection = () => {
             </h5>
           </div>
         </div>
-        <div class="in-animation4" id="e-home-fit-next-divs">
+        </motion.div>
+       <motion.div 
+       {...fadeLeft}>
+         <div class="in-animation4" id="e-home-fit-next-divs">
           <h1>Passionate About Sharing Their Love For The Sport </h1>
           <p>
             What sets us apart is our deep understanding of the motocross
             community.
           </p>
         </div>
+       </motion.div>
         <div className="e-price">
-          <div className="in-animation4">
+          <motion.div {...fadeLeft}>
+            <div className="in-animation4">
             <div className="e-hole-div">
               <img src={ABG16} alt="uyt" className="E-price-img" />
               <div className="E-price-new-div">
@@ -201,6 +283,8 @@ const CountUpSection = () => {
               </div>
             </div>
           </div>
+          </motion.div>
+          <motion.div {...fadeUp}>
           <div className="in-animation4">
             <div className="e-hole-div">
               <img src={ABG17} alt="uyt" className="E-price-img" />
@@ -210,6 +294,8 @@ const CountUpSection = () => {
               </div>
             </div>
           </div>
+          </motion.div>
+          <motion.div {...fadeDown}>
           <div className="in-animation4">
             <div className="e-hole-div">
               <img src={ABG18} alt="uyt" className="E-price-img" />
@@ -219,6 +305,8 @@ const CountUpSection = () => {
               </div>
             </div>
           </div>
+          </motion.div>
+          <motion.div {...fadeRight}>
           <div className="in-animation4">
             <div className="e-hole-div">
               <img src={ABG19} alt="uyt" className="E-price-img" />
@@ -228,6 +316,7 @@ const CountUpSection = () => {
               </div>
             </div>
           </div>
+          </motion.div>
         </div>
         <div className="E-marquee">
           <h1>

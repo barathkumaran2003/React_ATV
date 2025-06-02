@@ -296,12 +296,16 @@ hr {
   transition: all 0.5s;
 }
 
-.dropdown-div :hover
+.dropdown-div :hover h5
 {
+  color: #68e5b2;
+  transition: all 0.5s;
+}
+/* {
     color: #68e5b2;
       transition: all 0.5s;
 
-}
+} */
 .dropdown-div:hover div{
   width: 20px;
   height: 5px;
@@ -722,7 +726,7 @@ hr {
   font-family: Oswald, sans-serif;
   letter-spacing: 1px;
 }
-.experience-head {
+.experience-head1 {
   color: white;
   font-family: Oswald, sans-serif;
   font-weight: bolder;
@@ -1049,7 +1053,7 @@ hr {
     align-items: center;
 
 }
-#t-button{
+#t-buttonq{
       text-align: center;
     flex-flow: wrap;
     margin-top: 40px;

@@ -4,6 +4,43 @@ import Navigationbar from "./Navigationbar";
 import ABG20 from "../../public/A-BG20.png";
 import ABG21 from "../../public/A-BG21.png";
 import Footer from "./Footer";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+const fadeDown = {
+  initial: { opacity: 0, y: -50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+const fadeLeft = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+const fadeRight = {
+  initial: { opacity: 0, x: 50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+const popIn = {
+  initial: { opacity: 0, scale: 0.8 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { duration: 0.8 },
+  viewport: { once: false },
+};
+
+
 function Gallery() {
       
   return (
@@ -12,12 +49,17 @@ function Gallery() {
         <div className="c-nav">
           <Navigationbar />
         </div>
-        <div>
+        <motion.div 
+        {...popIn}>
+          <div>
           <h1 className="contact-title">Gallery</h1>
         </div>
+        </motion.div>
         <div className="g-div">
             <div className="g-div1">
-                <a href="" className="g-div2">
+                <motion.div {...fadeRight}>
+                  <div className="g-div123">
+                  <a href="" className="g-div2">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b0643d81d27459e3f28f3d_harley-davidson-zGzXsJUBQfs-unsplash.jpg" alt="sd" className="g-img"/>
                 </a>
                  <a href="" className="g-div3">
@@ -26,9 +68,14 @@ function Gallery() {
                 <a href="" className="g-div3">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b064e9ed5e3223d4264599_mike-kienle-2jCCzw83jGU-unsplash.jpg" alt="sd" className="g-img"/>
                 </a>
+                  </div>
+                  
+                </motion.div>
 
 
-                
+                <motion.div {...fadeLeft}>
+                                    <div className="g-div123">
+
                  <a href="" className="g-div3">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b020ce4c70c1160bff6cfb_them-snapshots-GP5HzcrKciI-unsplash.jpg" alt="sd" className="g-img"/>
                 </a>
@@ -38,7 +85,11 @@ function Gallery() {
                 <a href="" className="g-div2">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b0658fe01f2afe646721b3_joe-neric-EGzkhZyFRX4-unsplash.jpg" alt="sd" className="g-img"/>
                 </a>
+                </div>
+</motion.div>
 
+<motion.div {...fadeRight}>
+                    <div className="g-div123">
 
                 <a href="" className="g-div2">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b064e94bfa60d467c3294d_gijs-coolen-CRmcBeINxtg-unsplash.jpg" alt="sd" className="g-img"/>
@@ -49,7 +100,11 @@ function Gallery() {
                 <a href="" className="g-div3">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b0658f3dd5c8231faab8f9_majestic-lukas-tAUpEIpBUOw-unsplash.jpg" alt="sd" className="g-img"/>
                 </a>
+                </div>
+</motion.div>
 
+<motion.div {...fadeLeft}>
+                    <div className="g-div123">
 
                  <a href="" className="g-div3">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b0640e1f4890ccf6ad3a18_erik-mclean-JTvW7aAo7sE-unsplash.jpg" alt="sd" className="g-img"/>
@@ -60,6 +115,8 @@ function Gallery() {
                 <a href="" className="g-div2">
                     <img src="https://cdn.prod.website-files.com/64aed5c5b8ef105ff462ced9/64b595b6654493327b558236_joe-neric-HHunRG19kF8-unsplash.jpg" alt="sd" className="g-img"/>
                 </a>
+                </div>
+                </motion.div>
             </div>
 
         </div>

@@ -446,7 +446,7 @@ function ATVhome() {
               }}
               className="in-animation4"
             >
-              <h1 className="experience-head">
+              <h1 className="experience-head1">
                 Share Experiences, And Stay <br />
                 Connected
               </h1>
@@ -458,7 +458,7 @@ function ATVhome() {
             </motion.div>
             <motion.div
             {...fadeRight}>
-              <div className="in-animation4" id="t-button">
+              <div className="in-animation4" id="t-buttonq">
               <a href="/Contact" className="t-a">
                 Get started{" "}
               </a>

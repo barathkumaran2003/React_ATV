@@ -257,8 +257,16 @@
     overflow: hidden;
     grid-template-rows: auto auto;
     grid-auto-columns: 1fr;
-    display: grid;
     box-sizing: border-box;
+}
+
+.g-div123
+{   display: grid;
+     grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
 }
 .g-div2{
 grid-area: span 1 / span 2 / span 1 / span 2;
