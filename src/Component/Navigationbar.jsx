@@ -183,7 +183,7 @@ function Navigationbar() {
                 }
                 style={{ textDecoration: "none", color: "black" }}
               >
-                <h5>Log out</h5>
+                <h5 style={{cursor:'pointer'}}>Log out</h5>
               </a>
             </div>
           </div>
